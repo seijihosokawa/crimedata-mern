@@ -3,18 +3,18 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import postRoutes from './routes/posts.js';
+import postRoutes from './routes/years.js';
 
 const app = express();
 
-app.use('/posts', postRoutes);
+app.use('/years', postRoutes);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 dotenv.config();
 
-const CONNECTION_URL = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.sac6s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+const CONNECTION_URL = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.sac6s.mongodb.net/crime_data?retryWrites=true&w=majority`
 
 const PORT = process.env.PORT;
 

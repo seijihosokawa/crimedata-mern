@@ -1,9 +1,9 @@
 import express from 'express';
 
-import {getPosts} from '../controllers/posts.js';
+import {getYears} from '../controllers/years.js';
 
 const router = express.Router();
 
-router.get('/', getPosts);
+router.get('/', getYears);
 
 export default router;
