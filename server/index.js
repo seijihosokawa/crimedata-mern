@@ -3,11 +3,12 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import postRoutes from './routes/years.js';
+import crimeRoutes from './routes/crimes.js';
 
 const app = express();
 
-app.use('/years', postRoutes);
+app.use('/crimes', crimeRoutes);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
