@@ -14,9 +14,7 @@ export const getData = async (req, res) => {
 
 export const getYears = async (req, res) => {
     try {
-        var limit  = req.query.limit ? parseInt(req.query.limit) : 200;
-
-        const yearList = await Years.find().distinct('year').limit(limit);
+        const yearList = await Years.find().distinct('year');
 
         res.status(200).json(yearList);
     } catch (error) {
@@ -26,9 +24,7 @@ export const getYears = async (req, res) => {
 
 export const getStates = async (req, res) => {
     try {
-        var limit  = req.query.limit ? parseInt(req.query.limit) : 200;
-
-        const state = await Years.find().distinct('state_abbr').limit(limit);
+        const state = await Years.find().distinct('state_abbr');
 
         res.status(200).json(state);
     } catch (error) {
@@ -38,9 +34,7 @@ export const getStates = async (req, res) => {
 
 export const getStatesList = async (req, res) => {
     try {
-        var limit  = req.query.limit ? parseInt(req.query.limit) : 200;
-
-        const stateList = await Years.find().distinct('state_name').limit(limit);
+        const stateList = await Years.find().distinct('state_name');
 
         res.status(200).json(stateList);
     } catch (error) {
@@ -52,7 +46,7 @@ export const getSpecificYear = async (req, res) => {
     try {
         var year = req.params.year; 
 
-        const specificYear = await Years.find({'year':year}).limit(limit);
+        const specificYear = await Years.find({'year':year});
 
         res.status(200).json(specificYear);
     } catch (error) {
@@ -62,10 +56,9 @@ export const getSpecificYear = async (req, res) => {
 
 export const getSpecificState = async (req, res) => {
     try {
-        var limit  = req.query.limit ? parseInt(req.query.limit) : 200;
         var state = req.params.id.toUpperCase(); 
 
-        const specificState = await Years.find({'state_abbr':state}).limit(limit);
+        const specificState = await Years.find({'state_abbr':state});
 
         res.status(200).json(specificState);
     } catch (error) {
