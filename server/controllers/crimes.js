@@ -22,6 +22,28 @@ export const getYears = async (req, res) => {
     }
 }
 
+export const getYearsTotal = async (req, res) => {
+    try {
+        const yearTotal = await Years.find({'year_total':true});
+
+        res.status(200).json(yearTotal);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
+export const getSpecificYearTotal = async (req, res) => {
+    try {
+        var year = req.params.year; 
+
+        const yearTotal = await Years.find({'year_total':true , 'year':year});
+
+        res.status(200).json(yearTotal);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
 export const getStates = async (req, res) => {
     try {
         const state = await Years.find().distinct('state_abbr');
