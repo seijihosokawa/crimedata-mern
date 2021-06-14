@@ -1,4 +1,4 @@
-import Years from '../models/crimeSchema.js';
+import Years from '../models/summarySchema.js';
 
 export const getData = async (req, res) => {
     try {

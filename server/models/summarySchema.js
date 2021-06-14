@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const crimeSchema = mongoose.Schema({
+const summarySchema = mongoose.Schema({
     year: Number,
     population: Number,
     violent_crime: Number,
@@ -16,6 +16,6 @@ const crimeSchema = mongoose.Schema({
     state_name: String,
 }, {collection: 'years'});
 
-const Crimes = mongoose.model('Crimes', crimeSchema);
+const Crimes = mongoose.model('Crimes', summarySchema);
 
 export default Crimes;

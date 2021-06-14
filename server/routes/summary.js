@@ -1,6 +1,6 @@
 import express from 'express';
 
-import {getData, getYears, getStates, getStatesList, getSpecificYear, getSpecificState, getYearsTotal, getSpecificYearTotal} from '../controllers/crimes.js';
+import {getData, getYears, getStates, getStatesList, getSpecificYear, getSpecificState, getYearsTotal, getSpecificYearTotal} from '../controllers/summary.js';
 
 const router = express.Router();
 

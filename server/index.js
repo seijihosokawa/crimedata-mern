@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import crimeRoutes from './routes/crimes.js';
+import summaryRoutes from './routes/summary.js';
 
 const app = express();
 
-app.use('/crimes', crimeRoutes);
+app.use('/summary', summaryRoutes);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
