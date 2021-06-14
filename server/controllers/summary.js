@@ -4,9 +4,9 @@ export const getData = async (req, res) => {
     try {
         var limit  = req.query.limit ? parseInt(req.query.limit) : 200;
         
-        const year = await Years.find().limit(limit);
+        const crimeData = await Years.find().limit(limit);
 
-        res.status(200).json(year);
+        res.status(200).json(crimeData);
     } catch (error) {
         res.status(404).json({message: error.message});
     }
@@ -39,6 +39,33 @@ export const getSpecificYearTotal = async (req, res) => {
         const yearTotal = await Years.find({'year_total':true , 'year':year});
 
         res.status(200).json(yearTotal);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
+export const getSpecificYearRange = async (req, res) => {
+    try {
+        var yearStart = req.params.yearstart; 
+        var yearEnd = req.params.yearend; 
+
+        const yearTotalRange = await Years.find({'year_total':true }, { year: { $gte: yearStart, $lte: yearEnd }});
+
+        res.status(200).json(yearTotalRange);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
+export const getYearRange = async (req, res) => {
+    try {
+        var yearStart = req.params.yearstart; 
+        var yearEnd = req.params.yearend; 
+
+
+        const yearRange = await Years.find({ year: { $gte: yearStart, $lte: yearEnd }});
+
+        res.status(200).json(yearRange);
     } catch (error) {
         res.status(404).json({message: error.message});
     }
@@ -83,6 +110,17 @@ export const getSpecificState = async (req, res) => {
         const specificState = await Years.find({'state_abbr':state});
 
         res.status(200).json(specificState);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
+
+export const getCrimesList = async (req, res) => {
+    try {
+        const crimeList = ['violent_crime','homicide','rape','robbery','aggravated_assault',
+        'property_crime','burglary','larceny','motor_vehicle_theft'];
+
+        res.status(200).json(crimeList);
     } catch (error) {
         res.status(404).json({message: error.message});
     }
