@@ -7,7 +7,8 @@ const App = () => {
     return(
         <div>
             <h1>App</h1>
-            <SwaggerUi url="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0"/>
+            <SwaggerUi url="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0/swagger.json"/>
+            <button href="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0">Click here for documentation</button>
             
         </div>
     )
