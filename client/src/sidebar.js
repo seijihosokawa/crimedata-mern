@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from 'react-scroll';
-import "./Sidebar.css"
 
 function SideBar() {
     const [hideSummary, setHideSummary] = useState(true);

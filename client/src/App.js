@@ -1,10 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line
-import SwaggerUi from 'swagger-ui-react';
-// eslint-disable-next-line
-import "swagger-ui-react/swagger-ui.css"
-import SideBar from './Sidebar';
-import "./style.css";
+import SideBar from './Sidebar.js';
 
 
 const App = () => {
@@ -13,9 +8,6 @@ const App = () => {
             <div id="sidebar" className="fixed h-screen">
                 <SideBar></SideBar>
             </div>
-            {/*
-            <SwaggerUi url="https://raw.githubusercontent.com/seijihosokawa/seijihosokawa.github.io/master/assets/swagger_crimes.json"/>
-            */}
             <div id="content" className="container mx-auto py-10 h-full md:w-4/5 px-6 divide-y divide-gray-400 pl-32">
                 {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
                 <div className="flex flex-row w-full pb-12">
