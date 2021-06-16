@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from 'react-scroll';
+import "./Sidebar.css"
 
 function SideBar() {
-    const [hideSummary, sethideSummary] = useState(true);
+    const [hideSummary, setHideSummary] = useState(true);
     return (
             <div className="w-48 sm:relative h-full bg-gray-900 shadow flex-col justify-between sm:flex">
                 <div className="px-8">
@@ -16,16 +18,27 @@ function SideBar() {
                     </div>
                     <ul className="mt-2">
                         <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4">
-                            <div className="flex items-center">
-                                <span className="text-sm  ml-2">Introduction</span>
-                            </div>
+                            <Link to="intro">
+                                <div className="flex items-center">
+                                    <span className="text-sm  ml-2">Introduction</span>
+                                </div>
+                            </Link>
                         </li>
                         <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4">
-                            <div className="flex items-center">
-                                <span className="text-sm  ml-2">References</span>
-                            </div>
+                            <Link to="references">
+                                <div className="flex items-center">
+                                    <span className="text-sm  ml-2">References</span>
+                                </div>
+                            </Link>
                         </li>
-                        <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4" onClick={() => sethideSummary(!hideSummary)}>
+                        <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4">
+                            <Link to="errors">                            
+                                <div className="flex items-center">
+                                    <span className="text-sm  ml-2">Errors</span>
+                                </div>
+                            </Link>
+                        </li>
+                        <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4" onClick={() => setHideSummary(!hideSummary)}>
                             <div className="flex items-center">
                                 <span className="text-sm  ml-2">Summary</span>
                                 { hideSummary === true &&
