@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from './Sidebar.js';
+import SideBar from './sidebar.js';
 
 
 const App = () => {
