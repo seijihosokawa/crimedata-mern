@@ -46,7 +46,7 @@ const App = () => {
                     <div id="errors" className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Errors</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This API uses conventional HTTP responses to indicate whether an API request succeeded or failed.
-                            
+
                         </p>
                         
                     </div>
@@ -84,6 +84,37 @@ const App = () => {
                         <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
+                            <code>                                
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">/v1/summary</p>
+                            </code>                        
+                        </div>
+                        <div className="text-sm pt-4">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > ENDPOINTS</p>
+                            <code>                                
+                                <p className="pl-4 pb-1 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:year</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:yearstart/:yearend</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years-total</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years-total/:year</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years-total/:yearstart/:yearend</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /states</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /states/:id</p>
+                                <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /states-list</p>
+                                <p className="pl-4 pb-2 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /crimes</p>
+                            </code>                        
+                        </div>
+                    </div>   
+                </div>
+                <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">The Summary Object</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <div className="text-sm">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
                             <code>                                
                                 <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
                             </code>                        
