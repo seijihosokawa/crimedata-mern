@@ -42,6 +42,15 @@ const App = () => {
                         </div>
                     </div>                
                 </div>
+                <div className="flex flex-row w-full pb-12">
+                    <div id="references" className="container w-1/2 p-4">
+                        <h1 className="text-gray-100 text-3xl">References</h1>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the   
+                        <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0">Swagger Hub</a> API definitions.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200"> Here is the <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://crime-data-explorer.app.cloud.gov/pages/downloads">FBI Crime Data Explorer.</a></p>
+                    </div>         
+                </div>
+
                 <div  className="flex flex-row w-full pt-12 pb-6">
                     <div id="errors" className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Errors</h1>
@@ -108,7 +117,7 @@ const App = () => {
                 </div>
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">The Summary Object</h1>
+                        <h1 className="text-gray-100 text-3xl">summaryFullData</h1>
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
@@ -121,6 +130,52 @@ const App = () => {
                         </div>
                     </div>   
                 </div>
+                <div id="summaryGetYearsList" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">summaryGetYearsList</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <div className="text-sm">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
+                            <code>                                
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
+                            </code>                        
+                        </div>
+                    </div>   
+                </div>
+                <div id="summaryGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">summaryGetSpecificYear</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <div className="text-sm">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
+                            <code>                                
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
+                            </code>                        
+                        </div>
+                    </div>   
+                </div>
+                <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">summaryGetYearRange</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <div className="text-sm">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
+                            <code>                                
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
+                            </code>                        
+                        </div>
+                    </div>   
+                </div>
+
             </div>
         </div>
     )
