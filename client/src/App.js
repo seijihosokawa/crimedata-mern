@@ -21,10 +21,9 @@ const App = () => {
                         <ul className="text-gray-200">
                             <li> - Summary Reporting System</li>
                         </ul>
-
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
@@ -51,7 +50,7 @@ const App = () => {
                         
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > HTTP STATUS CODES</p>
                             <code>                                
@@ -81,7 +80,7 @@ const App = () => {
                         </ul>
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
@@ -112,7 +111,7 @@ const App = () => {
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
                             <code>                                
@@ -142,7 +141,7 @@ const App = () => {
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
                             <code>                                
@@ -157,7 +156,7 @@ const App = () => {
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
                             <code>                                
