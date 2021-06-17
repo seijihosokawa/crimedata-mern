@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import routes from './routes/index.js';
+import summaryRoutes from './routes/summary.js';
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use('/summary', routes.summary);
+app.use('/summary', summaryRoutes);
 
 
 dotenv.config();
