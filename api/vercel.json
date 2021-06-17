@@ -10,7 +10,7 @@
         {
             "src":"/(.*)",
             "status": 200,
-            "dest": "./index.js"
+            "dest": "/index.js"
         }
     ]
 }
