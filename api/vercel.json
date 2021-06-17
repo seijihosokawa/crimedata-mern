@@ -2,14 +2,20 @@
     "version": 2,
     "builds": [
         {
-            "src": "routes/summary.js",
+            "src": "index.js",
             "use": "@vercel/node"
         }
     ],
     "routes":[
         {
             "src":"/(.*)",
-            "dest": "routes/summary.js"
+            "dest": "index.js",
+            "method": ["GET"]
+        },
+        {
+            "src":"/summary",
+            "dest": "routes/summary.js",
+            "method": ["GET"]
         }
     ]
 }
