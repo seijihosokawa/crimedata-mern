@@ -58,6 +58,13 @@ function SideBar() {
                         { hideSummary === false &&
                         <div>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="summaryObject">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Summary Object</span>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
                                 <Link to="summaryFullData">                
                                     <div className="flex items-center">
                                         <span className="text-sm  ml-3">Full Data</span>

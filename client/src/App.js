@@ -3,6 +3,7 @@ import SideBar from './sidebar.js';
 
 
 const App = () => {
+    let exampleSchema = {"_id":"60c39e9b75fe792bf7e20703","year":1979,"state_abbr":"FL","state_name":"Florida","population":8860000,"violent_crime":73881,"homicide":1084,"rape":4576, "robbery":22097, "aggravated_assault":46124,"property_crime":607281, "burglary":190884,"larceny":378099,"motor_vehicle_theft":38298};
     return(
         <div className="flex flex-no-wrap bg-gradient-to-r from-gray-800 to-blue-800">
             <div id="sidebar" className="fixed h-screen">
@@ -105,6 +106,28 @@ const App = () => {
                         </div>
                     </div>   
                 </div>
+                <div id="summaryObject" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">The Summary Object</h1>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
+                            <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string, MongoDB Object Id</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <div className="text-sm">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Schema</p>
+                            <code>                                
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">
+                                    <pre>{JSON.stringify(exampleSchema,null, 2)}</pre>
+                                </p>
+                            </code>                        
+                        </div>
+                    </div>   
+                </div>
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">summaryFullData</h1>
@@ -126,7 +149,7 @@ const App = () => {
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl text-opacity-0 pb-6">Data/Code</h1>
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
                             <code>                                
