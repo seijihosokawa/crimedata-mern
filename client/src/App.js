@@ -74,6 +74,7 @@ const App = () => {
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains estimated data at the state and national level and was derived from the 
                         Summary Reporting System (SRS). These data reflect the estimates the FBI has traditionally included in its annual publications. 
                         Download this dataset to see the FBI's estimated crime totals for the nation and all 50 states, 1979 to current year available.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of crimes committed by year or state.</p>
                         <ul className="pt-6 pb-2 pr-2 text-gray-200">
                             <li> - Data Type: Estimated Crimes</li>
                             <li> - Years: 1979-2019</li>
@@ -112,8 +113,50 @@ const App = () => {
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                             <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string, MongoDB Object Id</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string</span></p>
+                                <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id</p>
                             </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">year <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The year the JSON response data is estimated of. The year range for this endpoint is between 1979 and 2019.</p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">state_abbr <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">state_name <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">population <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">homicide <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">rape <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">robbery <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">aggravated_assault <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">burglary <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">larceny <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                            </div>
+
                         </div>
                     </div>
                     <div className="container w-1/2 p-4">
