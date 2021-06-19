@@ -17,7 +17,7 @@ app.use('/v1/summary', summaryRoutes);
 
 dotenv.config();
 
-const CONNECTION_URL = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.sac6s.mongodb.net/crime_data?retryWrites=true&w=majority`
+const CONNECTION_URL = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.sac6s.mongodb.net/crime_data`
 
 const PORT = process.env.PORT || 5000;
 

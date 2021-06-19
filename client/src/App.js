@@ -87,7 +87,7 @@ const App = () => {
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">/v1/summary</p>
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://crimedata-mern.herokuapp.com/v1/summary</p>
                             </code>                        
                         </div>
                         <div className="text-sm pt-4">
@@ -194,7 +194,7 @@ const App = () => {
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Full Summary Data</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint returns all collections within the database.</p>
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
