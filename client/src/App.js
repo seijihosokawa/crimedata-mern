@@ -28,7 +28,7 @@ const App = () => {
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com</p>
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://crimedata-mern.herokuapp.com/</p>
                             </code>                        
                         </div>
                     </div>                
@@ -55,7 +55,7 @@ const App = () => {
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > HTTP STATUS CODES</p>
                             <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm grid grid-cols-3 gap-4">
+                                <p className="pl-4 pb-3 pt-2 pr-1 rounded-b bg-gray-800 text-gray-300 text-sm grid grid-cols-3 gap-4">
                                     <div>200 - OK</div><div className="col-span-2">Everything worked as expected.</div>
                                     <div>400 - Bad Request</div><div className="col-span-2">The request was unacceptable, often due to missing a required parameter.</div>
                                     <div>402 - Request Failed</div><div className="col-span-2">The parameters were valid but the request failed.</div>
@@ -75,6 +75,7 @@ const App = () => {
                         Summary Reporting System (SRS). These data reflect the estimates the FBI has traditionally included in its annual publications. 
                         Download this dataset to see the FBI's estimated crime totals for the nation and all 50 states, 1979 to current year available.</p>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of crimes committed by year or state.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the Summary Reporting System<a className="text-blue-600 hover:text-gray-300" href="https://ofm.wa.gov/sites/default/files/public/legacy/sac/pdf/srs/srs_dictionary.pdf"> Data Definitions</a>.</p>
                         <ul className="pt-6 pb-2 pr-2 text-gray-200">
                             <li> - Data Type: Estimated Crimes</li>
                             <li> - Years: 1979-2019</li>
@@ -121,40 +122,59 @@ const App = () => {
                                 <p className="pb-2 text-gray-400 text-sm">The year the JSON response data is estimated of. The year range for this endpoint is between 1979 and 2019.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">state_abbr <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">state_abbr <span className="pl-2 text-gray-400 text-sm">string</span></p>
+                                <p className="pb-2 text-gray-400 text-sm"> This is a two letter state abbreviation. You can find a list of the two letter state abbreviation for each state 
+                                <a className="text-blue-600 hover:text-gray-300" href="https://www.ssa.gov/international/coc-docs/states.html"> here</a>.</p>
+
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">state_name <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">state_name <span className="pl-2 text-gray-400 text-sm">string</span></p>
+                                <p className="pb-2 text-gray-400 text-sm"> The full name of the state.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">population <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">population <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">This is estimated population for the state/total USA for the given year.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">This is defined as the total number of violent crimes reported including murder, rape, robbery, and aggravated assault. </p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">homicide <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">homicide <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The willful killing of one person by another or the killing of another person through gross negligence. 
+                                Also includes the non-violent offense of Controlled Substance Homicide.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">rape <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">rape <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The definition of rape changed on <a className="text-blue-600 hover:text-gray-300" href="https://www.justice.gov/archives/opa/blog/updated-definition-rape">January 6, 2012 </a>
+                                    to <span className="italic">"the penetration, no matter how slight, of the vagina or anus with any body part or object, or oral penetration by a sex organ of another person, without the consent of the victim." </span>
+                                The old definition of rape (before 2012): <span className="italic">"the carnal knowledge of a female forcibly and against her will. Also includes attempts to commit forcible rape."</span></p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">robbery <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">robbery <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The taking or attempting to take anything of value from the care, custody, or control of 
+                                a person or persons by force or the threat of force or violence and/or by putting the victim in fear.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">aggravated_assault <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">aggravated_assault <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">An unlawful attack by one person upon another for the purpose of inflicting severe or aggravated bodily injury. 
+                                This type of assault usually</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">Total number of property crimes reported including burglary, theft, motor vehicle theft, and arson.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">burglary <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">burglary <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The unlawful entry, or attempted entry, of a structure to commit a felony or a theft.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">larceny <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">larceny <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The unlawful taking, carrying, leading, or riding away of property from the possession or constructive possession of another.</p>
                             </div>
                             <div>
-                                <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer, year data is estimated of</span></p>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                                <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
                             </div>
 
                         </div>
@@ -173,7 +193,7 @@ const App = () => {
                 </div>
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">summaryFullData</h1>
+                        <h1 className="text-gray-100 text-3xl">Get Full Summary Data</h1>
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
@@ -181,7 +201,7 @@ const App = () => {
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
                             <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://crimedata-mern.herokuapp.com/v1/summary</p>
                             </code>                        
                         </div>
                     </div>   
