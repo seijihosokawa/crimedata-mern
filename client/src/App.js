@@ -6,7 +6,7 @@ const App = () => {
     let exampleSchema = {"_id":"60c39e9b75fe792bf7e20703","year":1979,"state_abbr":"FL","state_name":"Florida","population":8860000,"violent_crime":73881,"homicide":1084,"rape":4576, "robbery":22097, "aggravated_assault":46124,"property_crime":607281, "burglary":190884,"larceny":378099,"motor_vehicle_theft":38298};
     return(
         <div className="flex flex-no-wrap bg-gradient-to-r from-gray-800 to-blue-800">
-            <div id="sidebar" className="fixed h-screen">
+            <div id="sidebar" className="fixed h-screen collapse">
                 <SideBar></SideBar>
             </div>
             <div id="content" className="container mx-auto py-10 h-full md:w-4/5 px-6 divide-y divide-gray-400 pl-32">
@@ -157,8 +157,9 @@ const App = () => {
                             </div>
                             <div>
                                 <p className="pt-2 pb-2 pr-2 text-gray-200">aggravated_assault <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                                <p className="pb-2 text-gray-400 text-sm">An unlawful attack by one person upon another for the purpose of inflicting severe or aggravated bodily injury. 
-                                This type of assault usually</p>
+                                <p className="pb-2 text-gray-400 text-sm">An unlawful attack by one person upon another for the purpose of
+                                inflicting severe or aggravated bodily injury. This type of assault usually is accompanied by the use
+                                of a weapon or by means likely to produce death or great bodily harm.</p>
                             </div>
                             <div>
                                 <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>

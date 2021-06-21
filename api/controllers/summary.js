@@ -1,10 +1,11 @@
-import Years from '../models/summarySchema.js';
+import States from '../models/statesSchema.js';
+import Totals from '../models/totalsSchema.js';
 
 export const getData = async (req, res) => {
     try {
-        var limit  = req.query.limit ? parseInt(req.query.limit) : 200;
+        var limit  = parseInt(req.query.limit);
         
-        const crimeData = await Years.find().limit(limit);
+        const crimeData = await States.find().limit(limit);
 
         res.status(200).json(crimeData);
     } catch (error) {
@@ -14,7 +15,7 @@ export const getData = async (req, res) => {
 
 export const getYears = async (req, res) => {
     try {
-        const yearList = await Years.find().distinct('year');
+        const yearList = await States.find().distinct('year');
 
         res.status(200).json(yearList);
     } catch (error) {
@@ -24,7 +25,7 @@ export const getYears = async (req, res) => {
 
 export const getYearsTotal = async (req, res) => {
     try {
-        const yearTotal = await Years.find({'year_total':true});
+        const yearTotal = await Totals.find();
 
         res.status(200).json(yearTotal);
     } catch (error) {
@@ -36,7 +37,7 @@ export const getSpecificYearTotal = async (req, res) => {
     try {
         var year = req.params.year; 
 
-        const yearTotal = await Years.find({'year_total':true , 'year':year});
+        const yearTotal = await Totals.find({'year':year});
 
         res.status(200).json(yearTotal);
     } catch (error) {
@@ -49,7 +50,7 @@ export const getSpecificYearRange = async (req, res) => {
         var yearStart = req.params.yearstart; 
         var yearEnd = req.params.yearend; 
 
-        const yearTotalRange = await Years.find({'year_total':true }, { year: { $gte: yearStart, $lte: yearEnd }});
+        const yearTotalRange = await States.find({'year_total':true }, { year: { $gte: yearStart, $lte: yearEnd }});
 
         res.status(200).json(yearTotalRange);
     } catch (error) {
@@ -63,7 +64,7 @@ export const getYearRange = async (req, res) => {
         var yearEnd = req.params.yearend; 
 
 
-        const yearRange = await Years.find({ year: { $gte: yearStart, $lte: yearEnd }});
+        const yearRange = await States.find({ year: { $gte: yearStart, $lte: yearEnd }});
 
         res.status(200).json(yearRange);
     } catch (error) {
@@ -73,7 +74,7 @@ export const getYearRange = async (req, res) => {
 
 export const getStates = async (req, res) => {
     try {
-        const state = await Years.find().distinct('state_abbr');
+        const state = await States.find().distinct('state_abbr');
 
         res.status(200).json(state);
     } catch (error) {
@@ -83,7 +84,7 @@ export const getStates = async (req, res) => {
 
 export const getStatesList = async (req, res) => {
     try {
-        const stateList = await Years.find().distinct('state_name');
+        const stateList = await States.find().distinct('state_name');
 
         res.status(200).json(stateList);
     } catch (error) {
@@ -95,7 +96,7 @@ export const getSpecificYear = async (req, res) => {
     try {
         var year = req.params.year; 
 
-        const specificYear = await Years.find({'year':year});
+        const specificYear = await States.find({'year':year});
 
         res.status(200).json(specificYear);
     } catch (error) {
@@ -107,7 +108,7 @@ export const getSpecificState = async (req, res) => {
     try {
         var state = req.params.id.toUpperCase(); 
 
-        const specificState = await Years.find({'state_abbr':state});
+        const specificState = await States.find({'state_abbr':state});
 
         res.status(200).json(specificState);
     } catch (error) {
