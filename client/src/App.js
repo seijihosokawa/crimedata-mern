@@ -3,7 +3,9 @@ import SideBar from './sidebar.js';
 
 
 const App = () => {
-    let exampleSchema = {"_id":"60c39e9b75fe792bf7e20703","year":1979,"state_abbr":"FL","state_name":"Florida","population":8860000,"violent_crime":73881,"homicide":1084,"rape":4576, "robbery":22097, "aggravated_assault":46124,"property_crime":607281, "burglary":190884,"larceny":378099,"motor_vehicle_theft":38298};
+    let exampleStatesSchema = {"_id":"60c39e9b75fe792bf7e20703","year":1979,"state_abbr":"FL","state_name":"Florida","population":8860000,"violent_crime":73881,"homicide":1084,"rape":4576, "robbery":22097, "aggravated_assault":46124,"property_crime":607281, "burglary":190884,"larceny":378099,"motor_vehicle_theft":38298};
+    let exampleTotalsSchema = {"_id":"60d0e80ff8b8f3081570c87a","year":1979,"population":220099000,"violent_crime":1208030,"homicide":21460,"rape":76390,"robbery":480700,"aggravated_assault":629480,"property_crime":11041500,"burglary":3327700,"larceny":6601000,"motor_vehicle_theft":1112800}
+
     return(
         <div className="flex flex-no-wrap bg-gradient-to-r from-gray-800 to-blue-800">
             <div id="sidebar" className="fixed h-screen collapse">
@@ -183,10 +185,18 @@ const App = () => {
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <div className="text-sm">
-                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Schema</p>
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >State Schema</p>
                             <code>                                
                                 <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">
-                                    <pre>{JSON.stringify(exampleSchema,null, 2)}</pre>
+                                    <pre>{JSON.stringify(exampleStatesSchema,null, 2)}</pre>
+                                </p>
+                            </code>                        
+                        </div>
+                        <div className="text-sm pt-10">
+                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Total Schema</p>
+                            <code>                                
+                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">
+                                    <pre>{JSON.stringify(exampleTotalsSchema,null, 2)}</pre>
                                 </p>
                             </code>                        
                         </div>
