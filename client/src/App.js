@@ -1,5 +1,6 @@
 import React from 'react';
 import SideBar from './sidebar.js';
+import ApiCard from './Apicard.js';
 
 
 const App = () => {
@@ -192,7 +193,7 @@ const App = () => {
                                 </p>
                             </code>                        
                         </div>
-                        <div className="text-sm pt-10">
+                        <div className="text-sm pt-16">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Total Schema</p>
                             <code>                                
                                 <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">
@@ -204,17 +205,26 @@ const App = () => {
                 </div>
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">Get Full Summary Data</h1>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint returns all collections within the database.</p>
+                    <h1 className="text-gray-100 text-3xl">Get Full Summary Data</h1>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint returns all objects within the database.</p>
+
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 pr-2 text-gray-200">limit<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                                <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and the entire collection, and the default is the entire collection.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects with crime data between 1979-2019 by state. </p>
+                            </div>
+                        </div>
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <div className="text-sm">
-                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
-                            <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://crimedata-mern.herokuapp.com/v1/summary</p>
-                            </code>                        
-                        </div>
+                        <ApiCard endpoint="/v1/summary/"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearsList" className="flex flex-row w-full pt-12 pb-6">
@@ -224,12 +234,7 @@ const App = () => {
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <div className="text-sm">
-                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
-                            <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
-                            </code>                        
-                        </div>
+                        <ApiCard endpoint="/v1/summary/years"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
@@ -239,12 +244,7 @@ const App = () => {
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <div className="text-sm">
-                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
-                            <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
-                            </code>                        
-                        </div>
+                        <ApiCard endpoint="/v1/summary/years/:year"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
@@ -254,15 +254,53 @@ const App = () => {
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <div className="text-sm">
-                            <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > Endpoint</p>
-                            <code>                                
-                                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://vercel.host.com/summary</p>
-                            </code>                        
-                        </div>
+                        <ApiCard endpoint="/v1/summary/years/:yearstart/:yearend"></ApiCard>
+
                     </div>   
                 </div>
+                <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get List of State Abbreviations</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/states"></ApiCard>
 
+                    </div>   
+                </div>
+                <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get States by Abbreviation</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/states/:id"></ApiCard>
+
+                    </div>   
+                </div>
+                <div id="summaryGetStatesList" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get List of States Full</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/states-list"></ApiCard>
+
+                    </div>   
+                </div>
+                <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get List of Crimes</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/crimes"></ApiCard>
+                    </div>   
+                </div>
             </div>
         </div>
     )
