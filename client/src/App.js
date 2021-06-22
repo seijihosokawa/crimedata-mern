@@ -1,6 +1,7 @@
 import React from 'react';
 import SideBar from './sidebar.js';
 import ApiCard from './Apicard.js';
+import ResponseCard from './ResponseCard.js';
 
 
 const App = () => {
@@ -206,13 +207,13 @@ const App = () => {
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl">Get Full Summary Data</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint returns all objects within the database.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the database.</p>
 
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                             <div>
                                 <p className="pt-2 pb-2 pr-2 text-gray-200">limit<span className="pl-2 text-gray-400 text-sm">optional</span></p>
-                                <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and the entire collection, and the default is the entire collection.</p>
+                                <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and no limit, and the default is the entire collection.</p>
                             </div>
                         </div>
                         <div className="divide-y divide-gray-400">                       
@@ -225,21 +226,35 @@ const App = () => {
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <ApiCard endpoint="/v1/summary/"></ApiCard>
+                        <ResponseCard response={JSON.stringify(exampleTotalsSchema,null, 2)}></ResponseCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearsList" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">summaryGetYearsList</h1>
-                        <p>Attributes</p>                       
+                        <h1 className="text-gray-100 text-3xl">Get List of Years</h1>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of years that the summary reporting system has data for. The years this endpoint returns are 1979-2019.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of years as integer between 1979-2019. </p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <ApiCard endpoint="/v1/summary/years"></ApiCard>
+                        <ResponseCard response="[1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019]"></ResponseCard>
                     </div>   
                 </div>
                 <div id="summaryGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">summaryGetSpecificYear</h1>
+                        <h1 className="text-gray-100 text-3xl">Get Specific Years</h1>
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
@@ -249,13 +264,42 @@ const App = () => {
                 </div>
                 <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">summaryGetYearRange</h1>
+                        <h1 className="text-gray-100 text-3xl">Get Range of Years</h1>
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
                         <ApiCard endpoint="/v1/summary/years/:yearstart/:yearend"></ApiCard>
-
+                    </div>   
+                </div>
+                <div id="summaryGetYearTotals" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get Year Totals</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/years-total/"></ApiCard>
+                    </div>   
+                </div>
+                <div id="summaryGetSpecificYearTotals" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get Specific Year Totals</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/years-total/:year"></ApiCard>
+                    </div>   
+                </div>
+                <div id="summaryGetYearTotalsRange" className="flex flex-row w-full pt-12 pb-6">
+                    <div className="container w-1/2 p-4 pt-4">
+                        <h1 className="text-gray-100 text-3xl">Get Range of Year Totals</h1>
+                        <p>Attributes</p>                       
+                    </div>
+                    <div className="container w-1/2 p-4">
+                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/v1/summary/years-total/:yearstart/:yearend"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
@@ -269,9 +313,9 @@ const App = () => {
 
                     </div>   
                 </div>
-                <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
+                <div id="summaryGetStatesById" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">Get States by Abbreviation</h1>
+                        <h1 className="text-gray-100 text-3xl">Get a Specific State</h1>
                         <p>Attributes</p>                       
                     </div>
                     <div className="container w-1/2 p-4">
@@ -291,7 +335,7 @@ const App = () => {
 
                     </div>   
                 </div>
-                <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
+                <div id="summaryGetCrimes" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of Crimes</h1>
                         <p>Attributes</p>                       

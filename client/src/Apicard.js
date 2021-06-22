@@ -26,7 +26,7 @@ function ApiCard({endpoint}) {
     } else if(ApiCardSelect === "axios"){
         request = <div id="codeBlock">
             <p><span className="text-red-400">var</span> axios = <span className="text-yellow-100">require</span>("axios").default;</p>
-            <p><span className="text-red-400">var</span> options = &#123;method: 'GET',url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete',params: &#123; limit: 200&#125;,&#125;;</p>
+            <p><span className="text-red-400">var</span> options = &#123;method: 'GET',url: 'https://crimedata-mern.herokuapp.com{endpoint}',params: &#123; limit: 200&#125;,&#125;;</p>
             <p>axios.request(options).then(function (response) &#123;console.log(response.data);&#125;).catch(function (error) &#123;console.error(error);&#125;);</p>
         </div>
     } else {

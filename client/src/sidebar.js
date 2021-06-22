@@ -79,44 +79,67 @@ function SideBar() {
                                 </Link>
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get Specific Years</span>
-                                </div>
+                                <Link to="summaryGetSpecificYear">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Specific Years</span>
+                                    </div>
+                                </Link>
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get Range of Years</span>
-                                </div>
+                                <Link to="summaryGetYearRange">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Range of Years</span>
+                                    </div>
+                                </Link>
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get Year Totals</span>
-                                </div>
+                                <Link to="summaryGetYearTotals">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Year Totals</span>
+                                    </div>
+                                </Link>
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get Range of Year Totals</span>
-                                </div>
+                                <Link to="summaryGetSpecificYearTotals">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Specific Year Totals</span>
+                                    </div>
+                                </Link>
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get List of States Abbreviated</span>
-                                </div>
+                                <Link to="summaryGetYearTotalsRange">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Range of Year Totals</span>
+                                    </div>
+                                </Link>
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get a Specific State</span>
-                                </div>
+                                <Link to="summaryGetStates">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get List of States Abbreviated</span>
+                                    </div>
+                                </Link>    
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get List of States Full</span>
-                                </div>
+                                <Link to="summaryGetStatesById">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get a Specific State</span>
+                                    </div>
+                                </Link>                            
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
-                                <div className="flex items-center">
-                                    <span className="text-sm  ml-3">Get List of Crimes Tracked</span>
-                                </div>
+                                <Link to="summaryGetStatesList">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get List of States Full</span>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="summaryGetCrimes">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get List of Crimes Tracked</span>
+                                    </div>
+                                </Link>
                             </li>
                         </div>
                         }
