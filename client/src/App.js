@@ -10,12 +10,12 @@ const App = () => {
 
     return(
         <div className="flex flex-no-wrap bg-gradient-to-r from-gray-800 to-blue-800">
-            <div id="sidebar" className="fixed h-screen collapse">
+            <div id="sidebar" className="hidden md:block fixed h-screen collapse">
                 <SideBar></SideBar>
             </div>
-            <div id="content" className="container mx-auto py-10 h-full md:w-4/5 px-6 divide-y divide-gray-400 pl-32">
+            <div id="content" className="container mx-auto py-10 h-full md:w-4/5 px-6 divide-y divide-gray-400 md:pl-32 pl-4">
                 <div className="flex flex-row w-full pb-12">
-                    <div id="intro" className="container w-1/2 p-4">
+                    <div id="intro" className="container w-full md:w-1/2 p-4">
                         <h1 className="text-gray-100 text-3xl">Introduction</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">The Crimes Data REST API is focused around delivering U.S. 
                         Crime data from various sources in <a className="text-blue-600 hover:text-gray-300" 
@@ -27,8 +27,8 @@ const App = () => {
                             <li> - Summary Reporting System</li>
                         </ul>
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
@@ -38,7 +38,7 @@ const App = () => {
                     </div>                
                 </div>
                 <div className="flex flex-row w-full pb-12">
-                    <div id="references" className="container w-1/2 p-4">
+                    <div id="references" className="container w-full md:w-1/2 p-4">
                         <h1 className="text-gray-100 text-3xl">References</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the   
                         <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0">Swagger Hub</a> API definitions.</p>
@@ -47,15 +47,15 @@ const App = () => {
                 </div>
 
                 <div  className="flex flex-row w-full pt-12 pb-6">
-                    <div id="errors" className="container w-1/2 p-4 pt-4">
+                    <div id="errors" className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Errors</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This API uses conventional HTTP responses to indicate whether an API request succeeded or failed.
 
                         </p>
                         
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > HTTP STATUS CODES</p>
                             <code>                                
@@ -73,7 +73,7 @@ const App = () => {
                 </div>
 
                 <div id="summary" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Summary Reporting System</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains estimated data at the state and national level and was derived from the 
                         Summary Reporting System (SRS). These data reflect the estimates the FBI has traditionally included in its annual publications. 
@@ -86,8 +86,8 @@ const App = () => {
                             <li> - Last Modified: August 25, 2020</li>
                         </ul>
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
@@ -113,7 +113,7 @@ const App = () => {
                     </div>   
                 </div>
                 <div id="summaryObject" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">The Summary Object</h1>
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
@@ -184,8 +184,8 @@ const App = () => {
 
                         </div>
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                         <div className="text-sm">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >State Schema</p>
                             <code>                                
@@ -205,7 +205,7 @@ const App = () => {
                     </div>   
                 </div>
                 <div id="summaryFullData" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl">Get Full Summary Data</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the database.</p>
 
@@ -223,14 +223,14 @@ const App = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/"></ApiCard>
                         <ResponseCard response={JSON.stringify(exampleTotalsSchema,null, 2)}></ResponseCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearsList" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of Years</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of years that the summary reporting system has data for. The years this endpoint returns are 1979-2019.</p>
                         <div className="divide-y divide-gray-400">                       
@@ -246,14 +246,14 @@ const App = () => {
                             </div>
                         </div>                    
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/years"></ApiCard>
-                        <ResponseCard response="[1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019]"></ResponseCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/years"></ApiCard>
+                        <ResponseCard response="[1979,1980...2018,2019]"></ResponseCard>
                     </div>   
                 </div>
                 <div id="summaryGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Specific Years</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state from the year requested. The years this endpoint will return are 1979-2019. Any other year will return an empty object.</p>
                         <div className="divide-y divide-gray-400">                       
@@ -269,13 +269,13 @@ const App = () => {
                             </div>
                         </div>                    
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/years/:year"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/years/:year"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Range of Years</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed for the variables yearstart and yearend are inclusive.</p>
                         <div className="divide-y divide-gray-400">                       
@@ -291,13 +291,13 @@ const App = () => {
                             </div>
                         </div>                    
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/years/:yearstart/:yearend"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/years/:yearstart/:yearend"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearTotals" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Year Totals</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the total crimes estimated by the Summary Reporting System in the United States for years between 1979-2019. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed for the variables yearstart and yearend are inclusive.</p>
                         <div className="divide-y divide-gray-400">                       
@@ -313,72 +313,72 @@ const App = () => {
                             </div>
                         </div>                    
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/years-total/"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/years-total/"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetSpecificYearTotals" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Specific Year Totals</h1>
                         <p>Attributes</p>                       
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/years-total/:year"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/years-total/:year"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetYearTotalsRange" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Range of Year Totals</h1>
                         <p>Attributes</p>                       
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/years-total/:yearstart/:yearend"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/years-total/:yearstart/:yearend"></ApiCard>
                     </div>   
                 </div>
                 <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of State Abbreviations</h1>
                         <p>Attributes</p>                       
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/states"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/states"></ApiCard>
 
                     </div>   
                 </div>
                 <div id="summaryGetStatesById" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get a Specific State</h1>
                         <p>Attributes</p>                       
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/states/:id"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/states/:id"></ApiCard>
 
                     </div>   
                 </div>
                 <div id="summaryGetStatesList" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of States Full</h1>
                         <p>Attributes</p>                       
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/states-list"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/states-list"></ApiCard>
 
                     </div>   
                 </div>
                 <div id="summaryGetCrimes" className="flex flex-row w-full pt-12 pb-6">
-                    <div className="container w-1/2 p-4 pt-4">
+                    <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of Crimes</h1>
                         <p>Attributes</p>                       
                     </div>
-                    <div className="container w-1/2 p-4">
-                        <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
-                        <ApiCard endpoint="/v1/summary/crimes"></ApiCard>
+                    <div className="hidden md:block container w-1/2 p-4">
+                        <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                        <ApiCard endpoint="/crimes"></ApiCard>
                     </div>   
                 </div>
             </div>

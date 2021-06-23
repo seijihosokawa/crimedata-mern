@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 function SideBar() {
     const [hideSummary, setHideSummary] = useState(true);
     return (
-            <div className="w-48 sm:hide h-full bg-gray-900 shadow flex-col justify-between sm:flex">
+            <div className="w-48 sm:hide h-full bg-gray-900 shadow flex-col justify-between ">
                 <div className="px-8">
                     <div className="w-full h-16 flex items-center text-white">
                         {/* heading starts */}

@@ -12,25 +12,25 @@ function ApiCard({endpoint}) {
 
     if(ApiCardSelect === "python"){
         request = <div id="codeBlock"> <p><span className="text-yellow-100">import</span> requests</p>
-            <p>requests.get("https://crimedata-mern.herokuapp.com{endpoint}")</p>
+            <p>requests.get("https://crimedata-mern.herokuapp.com/v1/summary{endpoint}")</p>
             <p>response.text</p>
         </div>
     } else if(ApiCardSelect === "java"){
         request = <div id="codeBlock">
             <p><span className="text-red-400">var</span> client = HttpClient.newHttpClient();</p>
             <p><span className="text-red-400">var</span> request = HttpRequest.newBuilder(
-                URI.create("https://crimedata-mern.herokuapp.com{endpoint}")).header("accept", "application/json").build();</p>
+                URI.create("https://crimedata-mern.herokuapp.com/v1/summary{endpoint}")).header("accept", "application/json").build();</p>
             <p><span className="text-red-400">var</span> response = client.send(request, new JsonBodyHandler&lt;&gt;(APOD.class));</p>
             <p>System.out.println(response.body().get().title);</p> 
         </div>
     } else if(ApiCardSelect === "axios"){
         request = <div id="codeBlock">
             <p><span className="text-red-400">var</span> axios = <span className="text-yellow-100">require</span>("axios").default;</p>
-            <p><span className="text-red-400">var</span> options = &#123;method: 'GET',url: 'https://crimedata-mern.herokuapp.com{endpoint}',params: &#123; limit: 200&#125;,&#125;;</p>
+            <p><span className="text-red-400">var</span> options = &#123;method: 'GET',url: 'https://crimedata-mern.herokuapp.com/v1/summary{endpoint}',params: &#123; limit: 200&#125;,&#125;;</p>
             <p>axios.request(options).then(function (response) &#123;console.log(response.data);&#125;).catch(function (error) &#123;console.error(error);&#125;);</p>
         </div>
     } else {
-        request = <div id="codeBlock"><span className="text-yellow-100">curl</span> https://crimedata-mern.herokuapp.com{endpoint}</div>
+        request = <div id="codeBlock"><span className="text-yellow-100">curl</span> https://crimedata-mern.herokuapp.com/v1/summary{endpoint}</div>
     }
 
     return (
@@ -53,7 +53,7 @@ function ApiCard({endpoint}) {
                         <option value="axios">Axios</option>
                     </select>
                 </p>
-                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">{request}</p>
+                <p className="md:overflow-ellipsis overflow-hidden pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">{request}</p>
             </code>                        
         </div>
     );
