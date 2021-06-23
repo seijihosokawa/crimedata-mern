@@ -255,7 +255,19 @@ const App = () => {
                 <div id="summaryGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Specific Years</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state from the year requested. The years this endpoint will return are 1979-2019. Any other year will return an empty object.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes estimated by the Summary Reporting System for each state in the year requested. The length will be 50 for the 50 US states.</p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
@@ -265,7 +277,19 @@ const App = () => {
                 <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Range of Years</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed for the variables yearstart and yearend are inclusive.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes committed for each state in the range of years requested.</p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
@@ -275,7 +299,19 @@ const App = () => {
                 <div id="summaryGetYearTotals" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Year Totals</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the total crimes estimated by the Summary Reporting System in the United States for years between 1979-2019. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed for the variables yearstart and yearend are inclusive.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes committed for each state in the range of years requested.</p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="container w-1/2 p-4">
                         <h1 className="text-3xl opacity-0 pb-6">Data/Code</h1>
