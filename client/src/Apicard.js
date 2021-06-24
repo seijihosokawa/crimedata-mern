@@ -55,7 +55,7 @@ function ApiCard({endpoint}) {
                         <option value="axios">Axios</option>
                     </select>
                 </p>
-                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">{request}</p>
+                <p className="overflow-x-auto pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">{request}</p>
             </code>                        
         </div>
     );
