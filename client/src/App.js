@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from './sidebar.js';
+import Navbar from './Navbar.js';
 import MobileNavConatiner from './MobileNavContainer';
 import SummaryApiDocs from './SummaryApiDocs.js';
 
@@ -7,16 +7,16 @@ import SummaryApiDocs from './SummaryApiDocs.js';
 const App = () => {
     return(
         <div className="flex flex-no-wrap bg-gradient-to-r from-gray-800 to-blue-800">
-            <div id="sidebar" className="hidden md:block fixed h-screen">
-                <SideBar></SideBar>
+            <div id="navbar" className="hidden md:block fixed h-screen">
+                <Navbar></Navbar>
             </div>
             <div id="mobileNavbar" className="visible md:hidden fixed w-full">
                   <MobileNavConatiner></MobileNavConatiner>
             </div>
-            <div id="content" className="container mx-auto py-10 h-full md:w-4/5 px-6 divide-y divide-gray-400 md:pl-32 pl-4">
+            <div id="content" className="container mx-auto py-10 h-full md:w-4/5 px-6 divide-y divide-gray-200 md:pl-32 pl-4">
                 <div className="flex flex-row w-full pb-12">
                     <div id="intro" className="container w-full md:w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl">Introduction</h1>
+                        <h1 className="text-gray-100 text-3xl font-medium">Introduction</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">The Crimes Data REST API is focused around delivering U.S. 
                         Crime data from various sources in <a className="text-blue-600 hover:text-gray-300" 
                         href="https://www.json.org/json-en.html">JSON-encoded</a> format. This API has easy to use and understnad endpoints combined with 
@@ -39,7 +39,7 @@ const App = () => {
                 </div>
                 <div className="flex flex-row w-full pb-12">
                     <div id="references" className="container w-full md:w-1/2 p-4">
-                        <h1 className="text-gray-100 text-3xl">References</h1>
+                        <h1 className="text-gray-100 text-3xl font-medium">References</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the   
                         <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0">Swagger Hub</a> API definitions.</p>
                         <p className="pt-6 pb-2 pr-2 text-blue-200"> Here is the <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://crime-data-explorer.app.cloud.gov/pages/downloads">FBI Crime Data Explorer.</a></p>
@@ -48,11 +48,8 @@ const App = () => {
 
                 <div  className="flex flex-row w-full pt-12 pb-6">
                     <div id="errors" className="container w-full md:w-1/2 p-4 pt-4">
-                        <h1 className="text-gray-100 text-3xl">Errors</h1>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">This API uses conventional HTTP responses to indicate whether an API request succeeded or failed.
-
-                        </p>
-                        
+                        <h1 className="text-gray-100 text-3xl font-medium">Errors</h1>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This API uses conventional HTTP responses to indicate whether an API request succeeded or failed.</p>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
@@ -65,7 +62,6 @@ const App = () => {
                                     <div>402 - Request Failed</div><div className="col-span-2">The parameters were valid but the request failed.</div>
                                     <div>404 - Not Found</div><div className="col-span-2">The requested resource doesn't exist.</div>
                                     <div>500 - Server Errors</div><div className="col-span-2">Something went wrong on our end. (This is rare.)</div>
-
                                 </p>
                             </code>                        
                         </div>
