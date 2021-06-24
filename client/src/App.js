@@ -137,7 +137,7 @@ const App = () => {
                             </div>
                             <div>
                                 <p className="pt-2 pb-2 pr-2 text-gray-200">population <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                                <p className="pb-2 text-gray-400 text-sm">This is estimated population for the state/total USA for the given year.</p>
+                                <p className="pb-2 text-gray-400 text-sm">This is estimated population for the state/total United States for the given year.</p>
                             </div>
                             <div>
                                 <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
@@ -213,7 +213,8 @@ const App = () => {
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                             <div>
                                 <p className="pt-2 pb-2 pr-2 text-gray-200">limit<span className="pl-2 text-gray-400 text-sm">optional</span></p>
-                                <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and no limit, and the default is the entire collection.</p>
+                                <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and no limit, and the default 
+                                is the entire collection.</p>
                             </div>
                         </div>
                         <div className="divide-y divide-gray-400">                       
@@ -232,7 +233,8 @@ const App = () => {
                 <div id="summaryGetYearsList" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of Years</h1>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of years that the summary reporting system has data for. The years this endpoint returns are 1979-2019.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of years that the summary reporting system has data for. The years this endpoint 
+                        returns are 1979-2019.</p>
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                             <div>
@@ -255,7 +257,8 @@ const App = () => {
                 <div id="summaryGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Specific Years</h1>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state from the year requested. The years this endpoint will return are 1979-2019. Any other year will return an empty object.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated for each state 
+                        from the year requested. The years this endpoint will return are 1979-2019. Any other year will return an empty object.</p>
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                             <div>
@@ -265,7 +268,8 @@ const App = () => {
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                             <div>
-                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes estimated by the Summary Reporting System for each state in the year requested. The length will be 50 for the 50 US states.</p>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes committed for each state 
+                                in the year requested. The length will be 50 for the 50 states within the United States.</p>
                             </div>
                         </div>                    
                     </div>
@@ -277,7 +281,9 @@ const App = () => {
                 <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Range of Years</h1>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed for the variables yearstart and yearend are inclusive.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state 
+                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed 
+                        for the variables yearstart and yearend are inclusive.</p>
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                             <div>
@@ -299,7 +305,8 @@ const App = () => {
                 <div id="summaryGetYearTotals" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Year Totals</h1>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the total crimes estimated by the Summary Reporting System in the United States for years between 1979-2019. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed for the variables yearstart and yearend are inclusive.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the total crimes estimated by the Summary Reporting System in the United 
+                        States for years between 1979-2019. The range of years this endpoint will return are between 1979-2019. </p>
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                             <div>
@@ -309,7 +316,7 @@ const App = () => {
                         <div className="divide-y divide-gray-400">                       
                             <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                             <div>
-                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes committed for each state in the range of years requested.</p>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the total estimated crimes committed in every year of the dataset.</p>
                             </div>
                         </div>                    
                     </div>
@@ -321,7 +328,21 @@ const App = () => {
                 <div id="summaryGetSpecificYearTotals" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Specific Year Totals</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an object detailing the total crimes estimated by the Summary Reporting System in the United States 
+                        for years between 1979-2019. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The year passed for the variables 
+                        year will be the only object returned.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">One object detailing the total estimated crimes committed in the United States for the year requested.</p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
@@ -331,7 +352,21 @@ const App = () => {
                 <div id="summaryGetYearTotalsRange" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get Range of Year Totals</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the total crimes estimated by the Summary Reporting System in the United States 
+                        for years between the passed range. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed 
+                        for the variables yearstart and yearend are inclusive.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the total estimated crimes committed in the United States in the range of years requested.</p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
@@ -341,7 +376,20 @@ const App = () => {
                 <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of State Abbreviations</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an array of state abbreviations in the United States in a 
+                        <a className="text-blue-600 hover:text-gray-300" href="https://www.ssa.gov/international/coc-docs/states.html"> two letter format</a>.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of abbreviated (U.S.A) states included in the dataset, formatted as two letter strings.</p>
+                            </div>                    
+                        </div>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
@@ -352,7 +400,21 @@ const App = () => {
                 <div id="summaryGetStatesById" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get a Specific State</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated for each year 
+                        from the state requested. The years this endpoint will return are 1979-2019. An abbreviated statename must be passed or response will be empty or include an error.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes commited for each year 
+                                in the state requested.</p>
+                            </div>
+                        </div>                    
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
@@ -363,7 +425,20 @@ const App = () => {
                 <div id="summaryGetStatesList" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of States Full</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an array of states in the United States with 
+                        <a className="text-blue-600 hover:text-gray-300" href="https://www.ssa.gov/international/coc-docs/states.html"> full names </a>.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of all (U.S.A) states included in the dataset, formatted as strings.</p>
+                            </div>                    
+                        </div>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
@@ -374,7 +449,20 @@ const App = () => {
                 <div id="summaryGetCrimes" className="flex flex-row w-full pt-12 pb-6">
                     <div className="container w-full md:w-1/2 p-4 pt-4">
                         <h1 className="text-gray-100 text-3xl">Get List of Crimes</h1>
-                        <p>Attributes</p>                       
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an array of crimes tracked within the Summary Reporting System in the United States.
+                        Each crime is estimated for each year between 1979-2019 on a state and national level.</p>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            </div>
+                        </div>
+                        <div className="divide-y divide-gray-400">                       
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                            <div>
+                                <p className="pt-2 pb-2 text-gray-400 text-sm">An array of crimes included in the dataset, formatted as strings.</p>
+                            </div>                    
+                        </div>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>

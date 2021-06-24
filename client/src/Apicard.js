@@ -5,18 +5,20 @@ function ApiCard({endpoint}) {
     const [ApiCardSelect, setApiCardSelect] = useState('curl');
 
     let request;
+    let name = `${endpoint}CodeBlock`
 
     function handleChange(event){
         setApiCardSelect(event.target.value);
     }
 
     if(ApiCardSelect === "python"){
-        request = <div id="codeBlock"> <p><span className="text-yellow-100">import</span> requests</p>
+        let name = `${endpoint}CodeBlock`
+        request = <div id={name}> <p><span className="text-yellow-100">import</span> requests</p>
             <p>requests.get("https://crimedata-mern.herokuapp.com/v1/summary{endpoint}")</p>
             <p>response.text</p>
         </div>
     } else if(ApiCardSelect === "java"){
-        request = <div id="codeBlock">
+        request = <div id={name}>
             <p><span className="text-red-400">var</span> client = HttpClient.newHttpClient();</p>
             <p><span className="text-red-400">var</span> request = HttpRequest.newBuilder(
                 URI.create("https://crimedata-mern.herokuapp.com/v1/summary{endpoint}")).header("accept", "application/json").build();</p>
@@ -24,13 +26,13 @@ function ApiCard({endpoint}) {
             <p>System.out.println(response.body().get().title);</p> 
         </div>
     } else if(ApiCardSelect === "axios"){
-        request = <div id="codeBlock">
+        request = <div id={name}>
             <p><span className="text-red-400">var</span> axios = <span className="text-yellow-100">require</span>("axios").default;</p>
             <p><span className="text-red-400">var</span> options = &#123;method: 'GET',url: 'https://crimedata-mern.herokuapp.com/v1/summary{endpoint}',params: &#123; limit: 200&#125;,&#125;;</p>
             <p>axios.request(options).then(function (response) &#123;console.log(response.data);&#125;).catch(function (error) &#123;console.error(error);&#125;);</p>
         </div>
     } else {
-        request = <div id="codeBlock"><span className="text-yellow-100">curl</span> https://crimedata-mern.herokuapp.com/v1/summary{endpoint}</div>
+        request = <div id={name}><span className="text-yellow-100">curl</span> https://crimedata-mern.herokuapp.com/v1/summary{endpoint}</div>
     }
 
     return (
@@ -38,7 +40,7 @@ function ApiCard({endpoint}) {
             <code>                                
                 <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-400" ><span className="text-blue-600">GET</span> {endpoint}                 
                     <button className="float-right mr-2" onClick={() => {
-                        var copiedCode = document.getElementById('codeBlock').innerText;
+                        var copiedCode = document.getElementById(`${endpoint}CodeBlock`).innerText;
                         navigator.clipboard.writeText(copiedCode);
                         }}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-current text-blue-300 hover:text-gray-100" viewBox="0 0 20 20">
@@ -53,7 +55,7 @@ function ApiCard({endpoint}) {
                         <option value="axios">Axios</option>
                     </select>
                 </p>
-                <p className="md:overflow-ellipsis overflow-hidden pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">{request}</p>
+                <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">{request}</p>
             </code>                        
         </div>
     );
