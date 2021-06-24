@@ -2,11 +2,12 @@ import React from 'react';
 import Navbar from './Navbar.js';
 import MobileNavConatiner from './MobileNavContainer';
 import SummaryApiDocs from './SummaryApiDocs.js';
+import './style.css';
 
 
 const App = () => {
     return(
-        <div className="flex flex-no-wrap bg-gradient-to-r from-gray-800 to-blue-800">
+        <div id="page" className="flex flex-no-wrap bg-gray-800">
             <div id="navbar" className="hidden md:block fixed h-screen">
                 <Navbar></Navbar>
             </div>
@@ -29,7 +30,7 @@ const App = () => {
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                        <div className="text-sm">
+                        <div className="text-sm rounded border border-gray-500">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > BASE URL</p>
                             <code>                                
                                 <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm">https://crimedata-mern.herokuapp.com/</p>
@@ -53,7 +54,7 @@ const App = () => {
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
                         <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                        <div className="text-sm">
+                        <div className="text-sm rounded border border-gray-500">
                             <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > HTTP STATUS CODES</p>
                             <code>                                
                                 <p className="pl-4 pb-3 pt-2 pr-1 rounded-b bg-gray-800 text-gray-300 text-sm grid grid-cols-3 gap-4">

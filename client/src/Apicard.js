@@ -36,7 +36,7 @@ function ApiCard({endpoint}) {
     }
 
     return (
-        <div className="text-sm">
+        <div className="text-sm text-sm rounded border border-gray-500">
             <code>                                
                 <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-400" ><span className="text-blue-600">GET</span> {endpoint}                 
                     <button className="float-right mr-2" onClick={() => {
