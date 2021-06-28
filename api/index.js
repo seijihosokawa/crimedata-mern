@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import summaryRoutes from './routes/summary.js';
+import arrestsRoutes from './routes/arrestsNational.js'
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/v1/summary', summaryRoutes);
+app.use('/v1/arrests', arrestsRoutes);
 
 
 dotenv.config();

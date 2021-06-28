@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar.js';
 import MobileNavConatiner from './MobileNavContainer';
 import SummaryApiDocs from './SummaryApiDocs.js';
+import ArrestsApiDocs from './ArrestsApiDocs.js'
 import './style.css';
 
 
@@ -68,7 +69,11 @@ const App = () => {
                         </div>
                     </div>   
                 </div>
-                <SummaryApiDocs></SummaryApiDocs>                
+                <SummaryApiDocs></SummaryApiDocs>
+                <div className="h-64">
+
+                </div>
+                <ArrestsApiDocs></ArrestsApiDocs>                
             </div>
         </div>
     )

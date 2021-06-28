@@ -3,6 +3,8 @@ import { Link } from 'react-scroll';
 
 function Navbar() {
     const [hideSummary, setHideSummary] = useState(true);
+    const [hideArrests, setHideArrests] = useState(true);
+
     return (
             <div className="w-full md:w-48 sm:hide h-full bg-gray-900 shadow flex-col justify-between pt-1">
                 <div className="px-8">
@@ -140,11 +142,42 @@ function Navbar() {
                             </li>
                         </div>
                         }
-                        <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4 pb-4">
-                            <div className="flex items-center">
-                                <span className="text-sm  ml-2">Next Data</span>
-                            </div>
+                        <li className="flex w-full justify-between text-gray-300 hover:text-blue-300 cursor-pointer items-center mb-4" onClick={() => setHideArrests(!hideArrests)}>            
+                                <div className="flex items-center">
+                                    <Link to="arrests">
+                                    <span className="text-sm ml-2">Arrests</span>
+                                    </Link>
+
+                                    { hideSummary === true &&
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 md:ml-20  mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    }
+                                    { hideSummary === false &&
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 md:ml-20 mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    }
+                                </div>
                         </li>
+                        { hideArrests === false &&
+                        <div>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="arrestsObject">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Arrests Object</span>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="arrestsFullData">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Full Data</span>
+                                    </div>
+                                </Link>
+                            </li>           
+                        </div>
+                        }
                     </ul>
                     
                 </div>
