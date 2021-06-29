@@ -6,7 +6,7 @@ function Navbar() {
     const [hideArrests, setHideArrests] = useState(true);
 
     return (
-            <div className="w-full md:w-48 sm:hide h-full bg-gray-900 shadow flex-col justify-between pt-1">
+            <div className="w-full md:w-48 sm:hide h-full bg-gray-900 shadow flex-col justify-between pt-1 overflow-y-auto">
                 <div className="px-8 pb-1">
                     <div className="hidden md:flex w-full h-16 items-center text-white">                        
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,6 +127,20 @@ function Navbar() {
                                 </Link>                            
                             </li>
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="summaryGetStatesYear">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get a Specific State Year</span>
+                                    </div>
+                                </Link>                            
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="summaryGetStatesYearRange">
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get a Specific State's Range of Years</span>
+                                    </div>
+                                </Link>                            
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
                                 <Link to="summaryGetStatesList">
                                     <div className="flex items-center">
                                         <span className="text-sm  ml-3">Get List of States Full</span>
@@ -148,12 +162,12 @@ function Navbar() {
                                     <span className="text-sm ml-2">Arrests</span>
                                     </Link>
 
-                                    { hideSummary === true &&
+                                    { hideArrests === true &&
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                     </svg>
                                     }
-                                    { hideSummary === false &&
+                                    { hideArrests === false &&
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 mt-1" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
                                     </svg>

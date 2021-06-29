@@ -4,8 +4,7 @@ import ResponseCard from './ResponseCard.js';
 
 
 function SummaryApiDocs() {
-    let exampleStatesSchema = { "year": 1979, "state_abbr": "FL", "state_name": "Florida", "population": 8860000, "violent_crime": 73881, "homicide": 1084, "rape": 4576, "robbery": 22097, "aggravated_assault": 46124, "property_crime": 607281, "burglary": 190884, "larceny": 378099, "motor_vehicle_theft": 38298 };
-    let exampleTotalsSchema = { "year": 1979, "population": 220099000, "violent_crime": 1208030, "homicide": 21460, "rape": 76390, "robbery": 480700, "aggravated_assault": 629480, "property_crime": 11041500, "burglary": 3327700, "larceny": 6601000, "motor_vehicle_theft": 1112800 }
+    let exampleArrestsSchema = {"year":2016,"population":323127513,"total_arrests":10662252,"homicide":11788,"rape":23632,"robbery":95754,"aggravated_assault":383977,"burglary":207325,"larceny":1050058,"motor_vehicle_theft":86088,"arson":9812,"violent_crime":515151,"property_crime":1353283,"other_assault":1078808,"forgery":56661,"fraud":128531,"embezzlement":15937,"stolen_property":93981,"vandalism":195951,"weapons":156777,"prostitution":38306,"other_sex_offenses":51063,"drug_abuse":1572579,"gambling":3705,"against_family":88748,"dui":1017808,"liquor_laws":234899,"drunkenness":376433,"disorderly_conduct":369733,"vagrancy":24851,"other":3254871,"suspicion":576,"curfew_loitering":34176};
 
     return (
         <div className="divide-y divide-gray-200">
@@ -45,29 +44,19 @@ function SummaryApiDocs() {
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string</span></p>
-                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id</p>
+                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id (Removed)</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">year <span className="pl-2 text-gray-400 text-sm">integer</span></p>
                             <p className="pb-2 text-gray-400 text-sm">The year the JSON response data is estimated of. The year range for this endpoint is between 1979 and 2019.</p>
                         </div>
                         <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">state_abbr <span className="pl-2 text-gray-400 text-sm">string</span></p>
-                            <p className="pb-2 text-gray-400 text-sm"> This is a two letter state abbreviation. You can find a list of the two letter state abbreviation for each state
-                                <a className="text-blue-600 hover:text-gray-300" href="https://www.ssa.gov/international/coc-docs/states.html"> here</a>.</p>
-
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">population<span className="pl-2 text-gray-400 text-sm">string</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">This is estimated population for the total United States for the given year.</p>
                         </div>
                         <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">state_name <span className="pl-2 text-gray-400 text-sm">string</span></p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">total_arrests <span className="pl-2 text-gray-400 text-sm">string</span></p>
                             <p className="pb-2 text-gray-400 text-sm"> The full name of the state.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">population <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">This is estimated population for the state/total United States for the given year.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">This is defined as the total number of violent crimes reported including murder, rape, robbery, and aggravated assault. </p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">homicide <span className="pl-2 text-gray-400 text-sm">integer</span></p>
@@ -107,23 +96,107 @@ function SummaryApiDocs() {
                             <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer</span></p>
                             <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
                         </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">arson <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">other_assault <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">forgery <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fraud <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">embezzlement <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">stolen_property <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">vandalism <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">weapons <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">prostitution <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">other_sex_offenses <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">drug_abuse <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">gambling <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">against_family <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">dui <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">liquor_laws <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">drunkenness <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">disorderly_conduct <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">vagrancy <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">other <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">suspicion <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
+                        <div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">curfew_loitering <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <div className="text-sm rounded border border-gray-500">
-                        <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >State Schema</p>
+                        <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Arrests Schema</p>
                         <code>
                             <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm overflow-x-auto">
-                                <pre>{JSON.stringify(exampleStatesSchema, null, 2)}</pre>
-                            </p>
-                        </code>
-                    </div>
-                    <div className="text-sm rounded border border-gray-500 mt-16">
-                        <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Total Schema</p>
-                        <code>
-                            <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm overflow-x-auto">
-                                <pre>{JSON.stringify(exampleTotalsSchema, null, 2)}</pre>
+                                <pre>{JSON.stringify(exampleArrestsSchema, null, 2)}</pre>
                             </p>
                         </code>
                     </div>

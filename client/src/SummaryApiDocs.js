@@ -204,7 +204,9 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -230,7 +232,9 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -254,7 +258,13 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">limit<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and no limit, and the default
+                                is the entire collection. This parameter can be used as <code className="text-gray-300 text-xs">limit=10</code></p>
+
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -279,7 +289,9 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -304,9 +316,10 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
-                        </div>
-                    </div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
+                        </div>                    </div>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
@@ -353,9 +366,14 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
-                        </div>
-                    </div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">limit<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A limit on the number of objects to be returned. Limit can range between 1 and no limit, and the default
+                                is the entire collection. This parameter can be used as <code className="text-gray-300 text-xs">limit=10</code></p>
+
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
+                        </div>                    </div>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
@@ -379,9 +397,10 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
-                        </div>
-                    </div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
+                        </div>                    </div>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
@@ -405,9 +424,10 @@ function SummaryApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
-                        </div>
-                    </div>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
+                        </div>                    </div>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
