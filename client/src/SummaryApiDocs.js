@@ -4,14 +4,14 @@ import ResponseCard from './ResponseCard.js';
 
 
 function SummaryApiDocs() {
-    let exampleStatesSchema = { "_id": "60c39e9b75fe792bf7e20703", "year": 1979, "state_abbr": "FL", "state_name": "Florida", "population": 8860000, "violent_crime": 73881, "homicide": 1084, "rape": 4576, "robbery": 22097, "aggravated_assault": 46124, "property_crime": 607281, "burglary": 190884, "larceny": 378099, "motor_vehicle_theft": 38298 };
-    let exampleTotalsSchema = { "_id": "60d0e80ff8b8f3081570c87a", "year": 1979, "population": 220099000, "violent_crime": 1208030, "homicide": 21460, "rape": 76390, "robbery": 480700, "aggravated_assault": 629480, "property_crime": 11041500, "burglary": 3327700, "larceny": 6601000, "motor_vehicle_theft": 1112800 }
+    let exampleStatesSchema = { "year": 1979, "state_abbr": "FL", "state_name": "Florida", "population": 8860000, "violent_crime": 73881, "homicide": 1084, "rape": 4576, "robbery": 22097, "aggravated_assault": 46124, "property_crime": 607281, "burglary": 190884, "larceny": 378099, "motor_vehicle_theft": 38298 };
+    let exampleTotalsSchema = { "year": 1979, "population": 220099000, "violent_crime": 1208030, "homicide": 21460, "rape": 76390, "robbery": 480700, "aggravated_assault": 629480, "property_crime": 11041500, "burglary": 3327700, "larceny": 6601000, "motor_vehicle_theft": 1112800 }
 
     return (
         <div className="divide-y divide-gray-200">
             <div id="summary" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
-                    <h1 className="text-gray-100 text-3xl font-medium">Summary Reporting System</h1>
+                    <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Summary Reporting System</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains estimated data at the state and national level and was derived from the
                         Summary Reporting System (SRS). These data reflect the estimates the FBI has traditionally included in its annual publications.
                         Download this dataset to see the FBI's estimated crime totals for the nation and all 50 states, 1979 to current year available.</p>
@@ -156,7 +156,7 @@ function SummaryApiDocs() {
 
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Summary Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -169,7 +169,7 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e7d1f8b8f3081570c05f","year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},{"_id":"60d0e7d1f8b8f3081570c060","year":1979,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064},"..."]}></ResponseCard>
+                    <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},{"year":1979,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064},"..."]}></ResponseCard>
                 </div>
             </div>
             <div id="summaryGetYearsList" className="flex flex-row w-full pt-12 pb-6">
@@ -218,7 +218,7 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/years/:year"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e7d1f8b8f3081570c4b1","year":2001,"state_abbr":"AK","state_name":"Alaska","population":633630,"violent_crime":3735,"homicide":39,"rape":501,"robbery":514,"aggravated_assault":2681,"property_crime":23160,"burglary":3847,"larceny":16695,"motor_vehicle_theft":2618},{"_id":"60d0e7d1f8b8f3081570c4b2","year":2001,"state_abbr":"AL","state_name":"Alabama","population":4468912,"violent_crime":19582,"homicide":379,"rape":1369,"robbery":5584,"aggravated_assault":12250,"property_crime":173253,"burglary":40642,"larceny":119992,"motor_vehicle_theft":12619},"..."]}></ResponseCard>
+                    <ResponseCard response={[{"year":2001,"state_abbr":"AK","state_name":"Alaska","population":633630,"violent_crime":3735,"homicide":39,"rape":501,"robbery":514,"aggravated_assault":2681,"property_crime":23160,"burglary":3847,"larceny":16695,"motor_vehicle_theft":2618},{"year":2001,"state_abbr":"AL","state_name":"Alabama","population":4468912,"violent_crime":19582,"homicide":379,"rape":1369,"robbery":5584,"aggravated_assault":12250,"property_crime":173253,"burglary":40642,"larceny":119992,"motor_vehicle_theft":12619},"..."]}></ResponseCard>
                 </div>
             </div>
             <div id="summaryGetYearRange" className="flex flex-row w-full pt-12 pb-6">
@@ -243,7 +243,7 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/years/:yearstart/:yearend"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e7d1f8b8f3081570c05f","year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},"...",{"_id":"60d0e7d1f8b8f3081570c060","year":2001,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064}]}></ResponseCard>
+                    <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},"...",{"year":2001,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064}]}></ResponseCard>
                 </div>
             </div>
             <div id="summaryGetYearTotals" className="flex flex-row w-full pt-12 pb-6">
@@ -267,7 +267,7 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/years-total/"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e80ff8b8f3081570c87a","year":1979,"population":220099000,"violent_crime":1208030,"homicide":21460,"rape":76390,"robbery":480700,"aggravated_assault":629480,"property_crime":11041500,"burglary":3327700,"larceny":6601000,"motor_vehicle_theft":1112800},"...",{"_id":"60d0e80ff8b8f3081570c891","year":2002,"population":287973924,"violent_crime":1423677,"homicide":16229,"rape":95235,"robbery":420806,"aggravated_assault":891407,"property_crime":10455277,"burglary":2151252,"larceny":7057379,"motor_vehicle_theft":1246646}]}></ResponseCard>
+                    <ResponseCard response={[{"year":1979,"population":220099000,"violent_crime":1208030,"homicide":21460,"rape":76390,"robbery":480700,"aggravated_assault":629480,"property_crime":11041500,"burglary":3327700,"larceny":6601000,"motor_vehicle_theft":1112800},"...",{"year":2002,"population":287973924,"violent_crime":1423677,"homicide":16229,"rape":95235,"robbery":420806,"aggravated_assault":891407,"property_crime":10455277,"burglary":2151252,"larceny":7057379,"motor_vehicle_theft":1246646}]}></ResponseCard>
                 </div>
             </div>
             <div id="summaryGetSpecificYearTotals" className="flex flex-row w-full pt-12 pb-6">
@@ -292,7 +292,7 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/years-total/:year"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e80ff8b8f3081570c8a1","year":2018,"population":326687501,"violent_crime":1252399,"homicide":16374,"rape":143765,"robbery":281278,"aggravated_assault":810982,"property_crime":7219084,"burglary":1235013,"larceny":5232167,"motor_vehicle_theft":751904}]}></ResponseCard>
+                    <ResponseCard response={[{"year":2018,"population":326687501,"violent_crime":1252399,"homicide":16374,"rape":143765,"robbery":281278,"aggravated_assault":810982,"property_crime":7219084,"burglary":1235013,"larceny":5232167,"motor_vehicle_theft":751904}]}></ResponseCard>
                 </div>
             </div>
             <div id="summaryGetYearTotalsRange" className="flex flex-row w-full pt-12 pb-6">
@@ -317,7 +317,7 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/years-total/:yearstart/:yearend"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e80ff8b8f3081570c887","year":1992,"population":255029699,"violent_crime":1932274,"homicide":23760,"rape":109062,"robbery":672478,"aggravated_assault":1126974,"property_crime":12505917,"burglary":2979884,"larceny":7915199,"motor_vehicle_theft":1610834},{"_id":"60d0e80ff8b8f3081570c888","year":1993,"population":257782608,"violent_crime":1926017,"homicide":24526,"rape":106014,"robbery":659870,"aggravated_assault":1135607,"property_crime":12218777,"burglary":2834808,"larceny":7820909,"motor_vehicle_theft":1563060},{"_id":"60d0e80ff8b8f3081570c889","year":1994,"population":260327021,"violent_crime":1857670,"homicide":23326,"rape":102216,"robbery":618949,"aggravated_assault":1113179,"property_crime":12131873,"burglary":2712774,"larceny":7879812,"motor_vehicle_theft":1539287}]}></ResponseCard>
+                    <ResponseCard response={[{"year":1992,"population":255029699,"violent_crime":1932274,"homicide":23760,"rape":109062,"robbery":672478,"aggravated_assault":1126974,"property_crime":12505917,"burglary":2979884,"larceny":7915199,"motor_vehicle_theft":1610834},{"year":1993,"population":257782608,"violent_crime":1926017,"homicide":24526,"rape":106014,"robbery":659870,"aggravated_assault":1135607,"property_crime":12218777,"burglary":2834808,"larceny":7820909,"motor_vehicle_theft":1563060},{"year":1994,"population":260327021,"violent_crime":1857670,"homicide":23326,"rape":102216,"robbery":618949,"aggravated_assault":1113179,"property_crime":12131873,"burglary":2712774,"larceny":7879812,"motor_vehicle_theft":1539287}]}></ResponseCard>
                 </div>
             </div>
             <div id="summaryGetStates" className="flex flex-row w-full pt-12 pb-6">
@@ -367,7 +367,59 @@ function SummaryApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="/states/:id"></ApiCard>
-                    <ResponseCard response={[{"_id":"60d0e7d1f8b8f3081570c065","year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905},{"_id":"60d0e7d1f8b8f3081570c097","year":1980,"state_abbr":"CT","state_name":"Connecticut","population":3095224,"violent_crime":12768,"homicide":146,"rape":670,"robbery":6749,"aggravated_assault":5203,"property_crime":169283,"burglary":52638,"larceny":95631,"motor_vehicle_theft":21014},"..."]}></ResponseCard>
+                    <ResponseCard response={[{"year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905},{"year":1980,"state_abbr":"CT","state_name":"Connecticut","population":3095224,"violent_crime":12768,"homicide":146,"rape":670,"robbery":6749,"aggravated_assault":5203,"property_crime":169283,"burglary":52638,"larceny":95631,"motor_vehicle_theft":21014},"..."]}></ResponseCard>
+
+                </div>
+            </div>
+            <div id="summaryGetStatesYear" className="flex flex-row w-full pt-12 pb-6">
+                <div className="container w-full md:w-1/2 p-4 pt-4">
+                    <h1 className="text-gray-100 text-3xl font-medium">Get a Specific State Year</h1>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated for each year
+                        from the state requested. The years this endpoint will return are 1979-2019. An abbreviated statename must be passed or response will be empty or include an error.</p>
+                    <div className="divide-y divide-gray-400">
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                        <div>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                        </div>
+                    </div>
+                    <div className="divide-y divide-gray-400">
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                        <div>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes commited for the requested year
+                                in the state requested.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="hidden md:block container w-1/2 p-4">
+                    <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                    <ApiCard endpoint="/states/:id/:year"></ApiCard>
+                    <ResponseCard response={[{"year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905}]}></ResponseCard>
+
+                </div>
+            </div>
+            <div id="summaryGetStatesYearRange" className="flex flex-row w-full pt-12 pb-6">
+                <div className="container w-full md:w-1/2 p-4 pt-4">
+                    <h1 className="text-gray-100 text-3xl font-medium">Get a Specific State's Range of Years</h1>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated for each year
+                        from the state requested. The years this endpoint will return are 1979-2019. An abbreviated statename must be passed or response will be empty or include an error.</p>
+                    <div className="divide-y divide-gray-400">
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
+                        <div>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                        </div>
+                    </div>
+                    <div className="divide-y divide-gray-400">
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
+                        <div>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes commited for the state requested in the year range give.
+                            The yearstart and yearend are inclusive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="hidden md:block container w-1/2 p-4">
+                    <h1 className="text-3xl invisible pb-6">Data/Code</h1>
+                    <ApiCard endpoint="/states/:id/:yearstart/:yearend"></ApiCard>
+                    <ResponseCard response={[{"year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905},{"year":1980,"state_abbr":"CT","state_name":"Connecticut","population":3095224,"violent_crime":12768,"homicide":146,"rape":670,"robbery":6749,"aggravated_assault":5203,"property_crime":169283,"burglary":52638,"larceny":95631,"motor_vehicle_theft":21014},"..."]}></ResponseCard>
 
                 </div>
             </div>
