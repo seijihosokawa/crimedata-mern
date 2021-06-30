@@ -157,7 +157,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/"></ApiCard>
+                    <ApiCard endpoint="summary/"></ApiCard>
                     <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},{"year":1979,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064},"..."]}></ResponseCard>
                 </div>
             </div>
@@ -181,7 +181,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/years"></ApiCard>
+                    <ApiCard endpoint="summary/years"></ApiCard>
                     <ResponseCard response={[1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019]}></ResponseCard>
                 </div>
             </div>
@@ -208,7 +208,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/years/:year"></ApiCard>
+                    <ApiCard endpoint="summary/years/:year"></ApiCard>
                     <ResponseCard response={[{"year":2001,"state_abbr":"AK","state_name":"Alaska","population":633630,"violent_crime":3735,"homicide":39,"rape":501,"robbery":514,"aggravated_assault":2681,"property_crime":23160,"burglary":3847,"larceny":16695,"motor_vehicle_theft":2618},{"year":2001,"state_abbr":"AL","state_name":"Alabama","population":4468912,"violent_crime":19582,"homicide":379,"rape":1369,"robbery":5584,"aggravated_assault":12250,"property_crime":173253,"burglary":40642,"larceny":119992,"motor_vehicle_theft":12619},"..."]}></ResponseCard>
                 </div>
             </div>
@@ -235,7 +235,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/years/:yearstart/:yearend"></ApiCard>
+                    <ApiCard endpoint="summary/years/:yearstart/:yearend"></ApiCard>
                     <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},"...",{"year":2001,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064}]}></ResponseCard>
                 </div>
             </div>
@@ -265,7 +265,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/years-total/"></ApiCard>
+                    <ApiCard endpoint="summary/years-total/"></ApiCard>
                     <ResponseCard response={[{"year":1979,"population":220099000,"violent_crime":1208030,"homicide":21460,"rape":76390,"robbery":480700,"aggravated_assault":629480,"property_crime":11041500,"burglary":3327700,"larceny":6601000,"motor_vehicle_theft":1112800},"...",{"year":2002,"population":287973924,"violent_crime":1423677,"homicide":16229,"rape":95235,"robbery":420806,"aggravated_assault":891407,"property_crime":10455277,"burglary":2151252,"larceny":7057379,"motor_vehicle_theft":1246646}]}></ResponseCard>
                 </div>
             </div>
@@ -292,7 +292,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/years-total/:year"></ApiCard>
+                    <ApiCard endpoint="summary/years-total/:year"></ApiCard>
                     <ResponseCard response={[{"year":2018,"population":326687501,"violent_crime":1252399,"homicide":16374,"rape":143765,"robbery":281278,"aggravated_assault":810982,"property_crime":7219084,"burglary":1235013,"larceny":5232167,"motor_vehicle_theft":751904}]}></ResponseCard>
                 </div>
             </div>
@@ -318,7 +318,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/years-total/:yearstart/:yearend"></ApiCard>
+                    <ApiCard endpoint="summary/years-total/:yearstart/:yearend"></ApiCard>
                     <ResponseCard response={[{"year":1992,"population":255029699,"violent_crime":1932274,"homicide":23760,"rape":109062,"robbery":672478,"aggravated_assault":1126974,"property_crime":12505917,"burglary":2979884,"larceny":7915199,"motor_vehicle_theft":1610834},{"year":1993,"population":257782608,"violent_crime":1926017,"homicide":24526,"rape":106014,"robbery":659870,"aggravated_assault":1135607,"property_crime":12218777,"burglary":2834808,"larceny":7820909,"motor_vehicle_theft":1563060},{"year":1994,"population":260327021,"violent_crime":1857670,"homicide":23326,"rape":102216,"robbery":618949,"aggravated_assault":1113179,"property_crime":12131873,"burglary":2712774,"larceny":7879812,"motor_vehicle_theft":1539287}]}></ResponseCard>
                 </div>
             </div>
@@ -342,7 +342,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/states"></ApiCard>
+                    <ApiCard endpoint="summary/states"></ApiCard>
                     <ResponseCard response={["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"]}></ResponseCard>
 
                 </div>
@@ -373,7 +373,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/states/:id"></ApiCard>
+                    <ApiCard endpoint="summary/states/:id"></ApiCard>
                     <ResponseCard response={[{"year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905},{"year":1980,"state_abbr":"CT","state_name":"Connecticut","population":3095224,"violent_crime":12768,"homicide":146,"rape":670,"robbery":6749,"aggravated_assault":5203,"property_crime":169283,"burglary":52638,"larceny":95631,"motor_vehicle_theft":21014},"..."]}></ResponseCard>
 
                 </div>
@@ -400,7 +400,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/states/:id/:year"></ApiCard>
+                    <ApiCard endpoint="summary/states/:id/:year"></ApiCard>
                     <ResponseCard response={[{"year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905}]}></ResponseCard>
 
                 </div>
@@ -427,7 +427,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/states/:id/:yearstart/:yearend"></ApiCard>
+                    <ApiCard endpoint="summary/states/:id/:yearstart/:yearend"></ApiCard>
                     <ResponseCard response={[{"year":1979,"state_abbr":"CT","state_name":"Connecticut","population":3115000,"violent_crime":12902,"homicide":131,"rape":752,"robbery":6021,"aggravated_assault":5998,"property_crime":167131,"burglary":48229,"larceny":96997,"motor_vehicle_theft":21905},{"year":1980,"state_abbr":"CT","state_name":"Connecticut","population":3095224,"violent_crime":12768,"homicide":146,"rape":670,"robbery":6749,"aggravated_assault":5203,"property_crime":169283,"burglary":52638,"larceny":95631,"motor_vehicle_theft":21014},"..."]}></ResponseCard>
 
                 </div>
@@ -452,7 +452,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/states-list"></ApiCard>
+                    <ApiCard endpoint="summary/states-list"></ApiCard>
                     <ResponseCard response={["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]}></ResponseCard>
                 </div>
             </div>
@@ -476,7 +476,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/crimes"></ApiCard>
+                    <ApiCard endpoint="summary/crimes"></ApiCard>
                     <ResponseCard response={["violent_crime","homicide","rape","robbery","aggravated_assault","property_crime","burglary","larceny","motor_vehicle_theft"]}></ResponseCard>
                 </div>
             </div>

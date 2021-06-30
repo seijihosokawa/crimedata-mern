@@ -164,7 +164,7 @@ function SummaryApiDocs() {
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
-                    <ApiCard endpoint="/"></ApiCard>
+                    <ApiCard endpoint="arrests/"></ApiCard>
                     <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},{"year":1979,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064},"..."]}></ResponseCard>
                 </div>
             </div>
