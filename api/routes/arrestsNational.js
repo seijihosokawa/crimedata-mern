@@ -11,7 +11,4 @@ router.get('/years/:yearstart/:yearend', getYearRange);
 router.get('/offenses', getArrestOffense);
 
 
-
-
-
 export default router;
