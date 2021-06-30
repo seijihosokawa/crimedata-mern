@@ -1,6 +1,7 @@
 import React from "react";
 import ApiCard from './Apicard.js';
 import ResponseCard from './ResponseCard.js';
+import ObjectAttribute from "./ObjectAttribute.js";
 
 
 function SummaryApiDocs() {
@@ -13,6 +14,8 @@ function SummaryApiDocs() {
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Arrest Data - Reported Number of Arrests by Crime</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported arrests for various offenses reported by participating law enforcement agencies. The arrests are by offense and broken down by age and sex or age and race. Not all agencies report race and/or ethnicity for arrests but they must report age and sex. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. Download this dataset to see totals of reported arrests for the nation from 1995–2016.</p>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of crimes committed by year or state.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the National Arrest data<a className="text-blue-600 hover:text-gray-300 pl-1" href="https://www.bjs.gov/arrests/templates/terms.cfm">definitions</a>.</p>
+
                     <ul className="pt-6 pb-2 pr-2 text-gray-200">
                         <li> - Data Type: National Arrest Data</li>
                         <li> - Years: 1995-2016</li>
@@ -46,19 +49,19 @@ function SummaryApiDocs() {
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string</span></p>
-                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id (Removed from response)</p>
+                            <p className="pb-2 text-gray-400 text-sm">MongoDB Object Id (Removed from response)</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">year <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The year the JSON response data is estimated of. The year range for this endpoint is between 1979 and 2019.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The year the JSON response data is estimated of. The year range for this endpoint is between 1995 and 2016.</p>
                         </div>
                         <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">population<span className="pl-2 text-gray-400 text-sm">string</span></p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">population <span className="pl-2 text-gray-400 text-sm">integer</span></p>
                             <p className="pb-2 text-gray-400 text-sm">This is estimated population for the total United States for the given year.</p>
                         </div>
                         <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">total_arrests <span className="pl-2 text-gray-400 text-sm">string</span></p>
-                            <p className="pb-2 text-gray-400 text-sm"> The full name of the state.</p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">total_arrests <span className="pl-2 text-gray-400 text-sm">integer</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The total number of arrests in the United States of that year.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">homicide <span className="pl-2 text-gray-400 text-sm">integer</span></p>
@@ -98,6 +101,7 @@ function SummaryApiDocs() {
                             <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer</span></p>
                             <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
                         </div>
+                        
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">arson <span className="pl-2 text-gray-400 text-sm">integer</span></p>
                             <p className="pb-2 text-gray-400 text-sm">Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc.</p>
@@ -146,54 +150,21 @@ function SummaryApiDocs() {
                             <p className="pt-2 pb-2 pr-2 text-gray-200">other_sex_offenses <span className="pl-2 text-gray-400 text-sm">integer</span></p>
                             <p className="pb-2 text-gray-400 text-sm">Offenses against chastity, common decency, morals, and the like. Incest, indecent exposure, and statutory rape are included. Attempts are included.</p>
                         </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">drug_abuse <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The violation of laws prohibiting the production, distribution, and/or use of certain controlled substances. The unlawful cultivation, manufacture, 
+                        <ObjectAttribute name="drug_abuse" type="integer" definition="The violation of laws prohibiting the production, distribution, and/or use of certain controlled substances. The unlawful cultivation, manufacture, 
                             distribution, sale, purchase, use, possession, transportation, or importation of any controlled drug or narcotic substance. Arrests for violations of state and local laws, specifically those 
                             relating to the unlawful possession, sale, use, growing, manufacturing, and making of narcotic drugs. The following drug categories are specified: opium or cocaine and their derivatives 
                             (morphine, heroin, codeine); marijuana; synthetic narcotics—manufactured narcotics that can cause true addiction (demerol, methadone); and dangerous nonnarcotic drugs (barbiturates, 
-                            benzedrine). Drug abuse violations are divided into two categories: (1) Drug sale/manufacturing and (2) Drug possession.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">gambling <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">To unlawfully bet or wager money or something else of value; assist, promote, or operate a game of chance for money or some other stake; possess or transmit wagering information; manufacture, sell, purchase, possess, or transport gambling equipment, devices, or goods; or tamper with the outcome of a sporting event or contest to gain a gambling advantage.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">against_family <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Unlawful nonviolent acts by a family member (or legal guardian) that threaten the physical, mental, or economic well-being or morals of another family member and that are not classifiable as other offenses, such as Assault or Sex Offenses. Attempts are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">dui <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Driving or operating a motor vehicle or common carrier while mentally or physically impaired as the result of consuming an alcoholic beverage or using a drug or narcotic.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">liquor_laws <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The violation of state or local laws or ordinances prohibiting the manufacture, sale, purchase, transportation, possession, or use of alcoholic beverages, not including driving under the influence and drunkenness. Federal violations are excluded.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">drunkenness <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">To drink alcoholic beverages to the extent that one's mental faculties and physical coordination are substantially impaired. Driving under the influence is excluded.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">disorderly_conduct <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Any behavior that tends to disturb the public peace or decorum, scandalize the community, or shock the public sense of morality.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">vagrancy <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The violation of a court order, regulation, ordinance, or law requiring the withdrawal of persons from the streets or other specified areas; prohibiting persons from remaining in an area or place in an idle or aimless manner; or prohibiting persons from going from place to place without visible means of support.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">other <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">All violations of state or local laws not specifically identified as Part I or Part II offenses, except traffic violations.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">suspicion <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Arrested for no specific offense and released without formal charges being placed.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">curfew_loitering <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Violations by juveniles of local curfew or loitering ordinances.</p>
-                        </div>
+                            benzedrine). Drug abuse violations are divided into two categories: (1) Drug sale/manufacturing and (2) Drug possession."></ObjectAttribute>
+                        <ObjectAttribute name="gambling" type="integer" definition="To unlawfully bet or wager money or something else of value; assist, promote, or operate a game of chance for money or some other stake; possess or transmit wagering information; manufacture, sell, purchase, possess, or transport gambling equipment, devices, or goods; or tamper with the outcome of a sporting event or contest to gain a gambling advantage."></ObjectAttribute>
+                        <ObjectAttribute name="against_family" type="integer" definition="Unlawful nonviolent acts by a family member (or legal guardian) that threaten the physical, mental, or economic well-being or morals of another family member and that are not classifiable as other offenses, such as Assault or Sex Offenses. Attempts are included."></ObjectAttribute>
+                        <ObjectAttribute name="dui" type="integer" definition="Driving or operating a motor vehicle or common carrier while mentally or physically impaired as the result of consuming an alcoholic beverage or using a drug or narcotic."></ObjectAttribute>
+                        <ObjectAttribute name="liquor_laws" type="integer" definition="The violation of state or local laws or ordinances prohibiting the manufacture, sale, purchase, transportation, possession, or use of alcoholic beverages, not including driving under the influence and drunkenness. Federal violations are excluded."></ObjectAttribute>
+                        <ObjectAttribute name="drunkenness" type="integer" definition="To drink alcoholic beverages to the extent that one's mental faculties and physical coordination are substantially impaired. Driving under the influence is excluded."></ObjectAttribute>
+                        <ObjectAttribute name="disorderly_conduct" type="integer" definition="Any behavior that tends to disturb the public peace or decorum, scandalize the community, or shock the public sense of morality."></ObjectAttribute>
+                        <ObjectAttribute name="vagrancy" type="integer" definition="The violation of a court order, regulation, ordinance, or law requiring the withdrawal of persons from the streets or other specified areas; prohibiting persons from remaining in an area or place in an idle or aimless manner; or prohibiting persons from going from place to place without visible means of support."></ObjectAttribute>
+                        <ObjectAttribute name="other" type="integer" definition="All violations of state or local laws not specifically identified as Part I or Part II offenses, except traffic violations."></ObjectAttribute>
+                        <ObjectAttribute name="suspicion" type="integer" definition="Arrested for no specific offense and released without formal charges being placed."></ObjectAttribute>
+                        <ObjectAttribute name="curfew_loitering" type="integer" definition="Violations by juveniles of local curfew or loitering ordinances."></ObjectAttribute>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
