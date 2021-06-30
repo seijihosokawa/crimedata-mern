@@ -31,8 +31,10 @@ function SummaryApiDocs() {
                         <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" > ENDPOINTS</p>
                         <code>
                             <p className="pl-4 pb-1 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /</p>
+                            <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years</p>
+                            <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:year</p>
+                            <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:yearstart/:yearend</p>                            
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /offenses</p>
-                            <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /:crime</p>
                         </code>
                     </div>
                 </div>
@@ -44,7 +46,7 @@ function SummaryApiDocs() {
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string</span></p>
-                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id (Removed)</p>
+                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id (Removed from response)</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">year <span className="pl-2 text-gray-400 text-sm">integer</span></p>
@@ -98,95 +100,99 @@ function SummaryApiDocs() {
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">arson <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">ncludes the offenses of murder and nonnegligent manslaughter, forcible rape, robbery, and aggravated assault. Post-2012, the violent crime index excludes rape arrests.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Includes the offenses of burglary, larceny-theft, motor vehicle theft, and arson.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">other_assault <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Assaults and attempted assaults which are not of an aggravated nature and do not result in serious injury to the victim. Stalking, intimidation, coercion, and hazing are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">forgery <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The altering, copying, or imitating of something, without authority or right, with the intent to deceive or defraud by passing the copy or thing altered or imitated as that which is original or genuine; or the selling, buying, or possession of an altered, copied, or imitated thing with the intent to deceive or defraud. Attempts are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fraud <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The intentional perversion of the truth for the purpose of inducing another person or other entity in reliance upon it to part with something of value or to surrender a legal right. Fraudulent conversion and obtaining of money or property by false pretenses. Confidence games and bad checks, except forgeries and counterfeiting, are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">embezzlement <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The unlawful misappropriation or misapplication by an offender to his/her own use or purpose of money, property, or some other thing of value entrusted to his/her care, custody, or control.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">stolen_property <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Buying, receiving, possessing, selling, concealing, or transporting any property with the knowledge that it has been unlawfully taken, as by burglary, embezzlement, fraud, larceny, robbery, etc. Attempts are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">vandalism <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">To willfully or maliciously destroy, injure, disfigure, or deface any public or private property, real or personal, without the consent of the owner or person having custody or control by cutting, tearing, breaking, marking, painting, drawing, covering with filth, or any other such means as may be specified by local law. Attempts are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">weapons <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The violation of laws or ordinances prohibiting the manufacture, sale, purchase, transportation, possession, concealment, or use of firearms, cutting instruments, explosives, incendiary devices, or other deadly weapons. Attempts are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">prostitution <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The unlawful promotion of or participation in sexual activities for profit, including attempts. Includes soliciting customers or transporting persons for prostitution purposes; owning, managing, or operating a dwelling or other establishment for the purpose of providing a place where prostitution is performed; or otherwise assisting or promoting prostitution.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">other_sex_offenses <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Offenses against chastity, common decency, morals, and the like. Incest, indecent exposure, and statutory rape are included. Attempts are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">drug_abuse <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The violation of laws prohibiting the production, distribution, and/or use of certain controlled substances. The unlawful cultivation, manufacture, 
+                            distribution, sale, purchase, use, possession, transportation, or importation of any controlled drug or narcotic substance. Arrests for violations of state and local laws, specifically those 
+                            relating to the unlawful possession, sale, use, growing, manufacturing, and making of narcotic drugs. The following drug categories are specified: opium or cocaine and their derivatives 
+                            (morphine, heroin, codeine); marijuana; synthetic narcotics—manufactured narcotics that can cause true addiction (demerol, methadone); and dangerous nonnarcotic drugs (barbiturates, 
+                            benzedrine). Drug abuse violations are divided into two categories: (1) Drug sale/manufacturing and (2) Drug possession.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">gambling <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">To unlawfully bet or wager money or something else of value; assist, promote, or operate a game of chance for money or some other stake; possess or transmit wagering information; manufacture, sell, purchase, possess, or transport gambling equipment, devices, or goods; or tamper with the outcome of a sporting event or contest to gain a gambling advantage.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">against_family <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Unlawful nonviolent acts by a family member (or legal guardian) that threaten the physical, mental, or economic well-being or morals of another family member and that are not classifiable as other offenses, such as Assault or Sex Offenses. Attempts are included.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">dui <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Driving or operating a motor vehicle or common carrier while mentally or physically impaired as the result of consuming an alcoholic beverage or using a drug or narcotic.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">liquor_laws <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The violation of state or local laws or ordinances prohibiting the manufacture, sale, purchase, transportation, possession, or use of alcoholic beverages, not including driving under the influence and drunkenness. Federal violations are excluded.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">drunkenness <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">To drink alcoholic beverages to the extent that one's mental faculties and physical coordination are substantially impaired. Driving under the influence is excluded.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">disorderly_conduct <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Any behavior that tends to disturb the public peace or decorum, scandalize the community, or shock the public sense of morality.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">vagrancy <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The violation of a court order, regulation, ordinance, or law requiring the withdrawal of persons from the streets or other specified areas; prohibiting persons from remaining in an area or place in an idle or aimless manner; or prohibiting persons from going from place to place without visible means of support.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">other <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">All violations of state or local laws not specifically identified as Part I or Part II offenses, except traffic violations.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">suspicion <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Arrested for no specific offense and released without formal charges being placed.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">curfew_loitering <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pb-2 text-gray-400 text-sm">Violations by juveniles of local curfew or loitering ordinances.</p>
                         </div>
                     </div>
                 </div>

@@ -58,7 +58,7 @@ function SummaryApiDocs() {
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">_id <span className="pl-2 text-gray-400 text-sm">string</span></p>
-                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id</p>
+                            <p className=" pb-2 text-gray-400 text-sm">MongoDB Object Id (Removed from response)</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">year <span className="pl-2 text-gray-400 text-sm">integer</span></p>

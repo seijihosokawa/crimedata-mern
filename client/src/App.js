@@ -27,6 +27,7 @@ const App = () => {
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Current Endpoints:</p>
                         <ul className="text-gray-200">
                             <li> - Summary Reporting System</li>
+                            <li> - National Arrest Data</li>
                         </ul>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
@@ -44,7 +45,8 @@ const App = () => {
                         <h1 className="text-gray-100 text-3xl font-medium">References</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the   
                         <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://app.swaggerhub.com/apis-docs/seijih/crimes/1.0.0">Swagger Hub</a> API definitions.</p>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200"> Here is the <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://crime-data-explorer.app.cloud.gov/pages/downloads">FBI Crime Data Explorer.</a></p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200"> Here is the<a className="text-blue-600 hover:text-gray-300 pl-1" href="https://crime-data-explorer.app.cloud.gov/pages/downloads">FBI Crime Data Explorer.</a></p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the National Arrest data<a className="text-blue-600 hover:text-gray-300 pl-1" href="https://www.bjs.gov/arrests/templates/terms.cfm">definitions</a>.</p>
                     </div>         
                 </div>
 
