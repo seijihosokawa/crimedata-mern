@@ -189,7 +189,35 @@ function Navbar() {
                                         <span className="text-sm  ml-3">Full Data</span>
                                     </div>
                                 </Link>
-                            </li>           
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="arrestsGetYearsList">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get List of Years</span>
+                                    </div>
+                                </Link>
+                            </li>  
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="arrestsGetSpecificYear">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Specific Year</span>
+                                    </div>
+                                </Link>
+                            </li>  
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="arrestsGetYearRange">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get Range of Years</span>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="arrestsGetOffenses">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm  ml-3">Get List of Offenses</span>
+                                    </div>
+                                </Link>
+                            </li>       
                         </div>
                         }
                     </ul>
