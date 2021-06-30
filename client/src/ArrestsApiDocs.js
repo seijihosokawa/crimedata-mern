@@ -98,58 +98,21 @@ function SummaryApiDocs() {
                             <p className="pb-2 text-gray-400 text-sm">The unlawful taking, carrying, leading, or riding away of property from the possession or constructive possession of another.</p>
                         </div>
                         <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">More Attributes</p>
                         </div>
-                        
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">arson <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">violent_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">ncludes the offenses of murder and nonnegligent manslaughter, forcible rape, robbery, and aggravated assault. Post-2012, the violent crime index excludes rape arrests.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Includes the offenses of burglary, larceny-theft, motor vehicle theft, and arson.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">other_assault <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Assaults and attempted assaults which are not of an aggravated nature and do not result in serious injury to the victim. Stalking, intimidation, coercion, and hazing are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">forgery <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The altering, copying, or imitating of something, without authority or right, with the intent to deceive or defraud by passing the copy or thing altered or imitated as that which is original or genuine; or the selling, buying, or possession of an altered, copied, or imitated thing with the intent to deceive or defraud. Attempts are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">fraud <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The intentional perversion of the truth for the purpose of inducing another person or other entity in reliance upon it to part with something of value or to surrender a legal right. Fraudulent conversion and obtaining of money or property by false pretenses. Confidence games and bad checks, except forgeries and counterfeiting, are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">embezzlement <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The unlawful misappropriation or misapplication by an offender to his/her own use or purpose of money, property, or some other thing of value entrusted to his/her care, custody, or control.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">stolen_property <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Buying, receiving, possessing, selling, concealing, or transporting any property with the knowledge that it has been unlawfully taken, as by burglary, embezzlement, fraud, larceny, robbery, etc. Attempts are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">vandalism <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">To willfully or maliciously destroy, injure, disfigure, or deface any public or private property, real or personal, without the consent of the owner or person having custody or control by cutting, tearing, breaking, marking, painting, drawing, covering with filth, or any other such means as may be specified by local law. Attempts are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">weapons <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The violation of laws or ordinances prohibiting the manufacture, sale, purchase, transportation, possession, concealment, or use of firearms, cutting instruments, explosives, incendiary devices, or other deadly weapons. Attempts are included.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">prostitution <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The unlawful promotion of or participation in sexual activities for profit, including attempts. Includes soliciting customers or transporting persons for prostitution purposes; owning, managing, or operating a dwelling or other establishment for the purpose of providing a place where prostitution is performed; or otherwise assisting or promoting prostitution.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">other_sex_offenses <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Offenses against chastity, common decency, morals, and the like. Incest, indecent exposure, and statutory rape are included. Attempts are included.</p>
-                        </div>
+                        <ObjectAttribute name="motor_vehicle_theft" type="integer" definition="The theft or attempted theft of a motor vehicle."></ObjectAttribute>
+                        <ObjectAttribute name="arson" type="integer" definition="Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc."></ObjectAttribute>
+                        <ObjectAttribute name="violent_crime" type="integer" definition="Includes the offenses of murder and nonnegligent manslaughter, forcible rape, robbery, and aggravated assault. Post-2012, the violent crime index excludes rape arrests."></ObjectAttribute>
+                        <ObjectAttribute name="property_crime" type="integer" definition="Includes the offenses of burglary, larceny-theft, motor vehicle theft, and arson."></ObjectAttribute>
+                        <ObjectAttribute name="other_assault" type="integer" definition="Assaults and attempted assaults which are not of an aggravated nature and do not result in serious injury to the victim. Stalking, intimidation, coercion, and hazing are included."></ObjectAttribute>
+                        <ObjectAttribute name="forgery" type="integer" definition="The altering, copying, or imitating of something, without authority or right, with the intent to deceive or defraud by passing the copy or thing altered or imitated as that which is original or genuine; or the selling, buying, or possession of an altered, copied, or imitated thing with the intent to deceive or defraud. Attempts are included."></ObjectAttribute>
+                        <ObjectAttribute name="fraud" type="integer" definition="The intentional perversion of the truth for the purpose of inducing another person or other entity in reliance upon it to part with something of value or to surrender a legal right. Fraudulent conversion and obtaining of money or property by false pretenses. Confidence games and bad checks, except forgeries and counterfeiting, are included."></ObjectAttribute>
+                        <ObjectAttribute name="embezzlement" type="integer" definition="The unlawful misappropriation or misapplication by an offender to his/her own use or purpose of money, property, or some other thing of value entrusted to his/her care, custody, or control."></ObjectAttribute>
+                        <ObjectAttribute name="stolen_property" type="integer" definition="Buying, receiving, possessing, selling, concealing, or transporting any property with the knowledge that it has been unlawfully taken, as by burglary, embezzlement, fraud, larceny, robbery, etc. Attempts are included."></ObjectAttribute>
+                        <ObjectAttribute name="vandalism" type="integer" definition="To willfully or maliciously destroy, injure, disfigure, or deface any public or private property, real or personal, without the consent of the owner or person having custody or control by cutting, tearing, breaking, marking, painting, drawing, covering with filth, or any other such means as may be specified by local law. Attempts are included."></ObjectAttribute>
+                        <ObjectAttribute name="weapons" type="integer" definition="The violation of laws or ordinances prohibiting the manufacture, sale, purchase, transportation, possession, concealment, or use of firearms, cutting instruments, explosives, incendiary devices, or other deadly weapons. Attempts are included."></ObjectAttribute>
+                        <ObjectAttribute name="prostitution" type="integer" definition="he unlawful promotion of or participation in sexual activities for profit, including attempts. Includes soliciting customers or transporting persons for prostitution purposes; owning, managing, or operating a dwelling or other establishment for the purpose of providing a place where prostitution is performed; or otherwise assisting or promoting prostitution."></ObjectAttribute>
+                        <ObjectAttribute name="other_sex_offenses" type="integer" definition="Offenses against chastity, common decency, morals, and the like. Incest, indecent exposure, and statutory rape are included. Attempts are included."></ObjectAttribute>
                         <ObjectAttribute name="drug_abuse" type="integer" definition="The violation of laws prohibiting the production, distribution, and/or use of certain controlled substances. The unlawful cultivation, manufacture, 
                             distribution, sale, purchase, use, possession, transportation, or importation of any controlled drug or narcotic substance. Arrests for violations of state and local laws, specifically those 
                             relating to the unlawful possession, sale, use, growing, manufacturing, and making of narcotic drugs. The following drug categories are specified: opium or cocaine and their derivatives 

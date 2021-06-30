@@ -1,6 +1,7 @@
 import React from "react";
 import ApiCard from './Apicard.js';
 import ResponseCard from './ResponseCard.js';
+import ObjectAttribute from "./ObjectAttribute.js";
 
 
 function SummaryApiDocs() {
@@ -99,27 +100,15 @@ function SummaryApiDocs() {
                                 a person or persons by force or the threat of force or violence and/or by putting the victim in fear.</p>
                         </div>
                         <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">aggravated_assault <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">An unlawful attack by one person upon another for the purpose of
+                            <p className="pt-6 pb-2 pr-2 text-blue-200">More Attributes</p>
+                        </div>
+                        <ObjectAttribute name="aggravated_assault" type="integer" definition="An unlawful attack by one person upon another for the purpose of
                                 inflicting severe or aggravated bodily injury. This type of assault usually is accompanied by the use
-                                of a weapon or by means likely to produce death or great bodily harm.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">property_crime <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">Total number of property crimes reported including burglary, theft, motor vehicle theft, and arson.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">burglary <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The unlawful entry, or attempted entry, of a structure to commit a felony or a theft.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">larceny <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The unlawful taking, carrying, leading, or riding away of property from the possession or constructive possession of another.</p>
-                        </div>
-                        <div>
-                            <p className="pt-2 pb-2 pr-2 text-gray-200">motor_vehicle_theft <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The theft or attempted theft of a motor vehicle.</p>
-                        </div>
+                                of a weapon or by means likely to produce death or great bodily harm."></ObjectAttribute>
+                        <ObjectAttribute name="property_crime" type="integer" definition="Total number of property crimes reported including burglary, theft, motor vehicle theft, and arson."></ObjectAttribute>
+                        <ObjectAttribute name="burglary" type="integer" definition="The unlawful entry, or attempted entry, of a structure to commit a felony or a theft."></ObjectAttribute>
+                        <ObjectAttribute name="larceny" type="integer" definition="The unlawful taking, carrying, leading, or riding away of property from the possession or constructive possession of another."></ObjectAttribute>
+                        <ObjectAttribute name="motor_vehicle_theft" type="integer" definition="The theft or attempted theft of a motor vehicle."></ObjectAttribute>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
