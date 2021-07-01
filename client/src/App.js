@@ -21,10 +21,11 @@ const App = () => {
                         <h1 className="text-gray-100 text-3xl font-medium">Introduction</h1>
                         <p className="pt-6 pb-2 pr-2 text-blue-200">The Crimes Data REST API is focused around delivering U.S. 
                         Crime data from various sources in <a className="text-blue-600 hover:text-gray-300" 
-                        href="https://www.json.org/json-en.html">JSON-encoded</a> format. This API has easy to use and understand endpoints combined with 
-                        standard HTTP responses. The API data gathered from the   
+                        href="https://www.json.org/json-en.html">JSON-encoded</a> format. Government data and websites are notoriously difficult to navigate and find specific data. 
+                        This Crime data API has simple and understandable endpoints combined with standard HTTP responses. It offers straightforward documentation to understand each 
+                        endpoint and field, allowing users to filter for crimes or offenses they are specifically looking for. The API's datasets are gathered from the   
                         <a className="text-blue-600 hover:text-gray-300 pl-1" href="https://crime-data-explorer.app.cloud.gov/pages/downloads">Crime Data Explorer</a>.</p>
-                        <p className="pt-6 pb-2 pr-2 text-blue-200">Current Endpoints:</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Current Datasets:</p>
                         <ul className="text-gray-200">
                             <li> - Summary Reporting System</li>
                             <li> - National Arrest Data</li>
