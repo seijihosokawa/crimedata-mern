@@ -11,6 +11,8 @@ export const getData = async (req, res) => {
             let fields = { _id: 0, year:1, state_abbr: 1, state_name: 1}; 
 
             fieldsArr.forEach(element => {
+                if(States.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -42,11 +44,15 @@ export const getSpecificYear = async (req, res) => {
         var year = req.params.year; 
         var queryString = req.query.fields;
 
+        if(year < 1979 || year > 2019) throw new Error('The specified year must be between 1979-2019.');
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1, state_abbr: 1, state_name: 1}; 
 
             fieldsArr.forEach(element => {
+                if(States.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -69,11 +75,17 @@ export const getYearRange = async (req, res) => {
         var yearEnd = req.params.yearend;
         var queryString = req.query.fields;
 
+        if(yearStart > yearEnd) throw new Error(`The starting year (${yearStart}) must be before the ending year (${yearEnd}).`);
+        if(yearStart < 1979 || yearStart > 2019 || yearEnd < 1979 || yearEnd > 2019) throw new Error('The year range must be between 1979-2019.');
+
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1, state_abbr: 1, state_name: 1}; 
 
             fieldsArr.forEach(element => {
+                if(States.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -100,6 +112,8 @@ export const getTotals = async (req, res) => {
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
+                if(Totals.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -121,11 +135,15 @@ export const getSpecificTotals = async (req, res) => {
         var year = req.params.year;
         var queryString = req.query.fields;
 
+        if(year < 1979 || year > 2019) throw new Error('The specified year must be between 1979-2019.');
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
+                if(Totals.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -148,11 +166,17 @@ export const getSpecificTotalsRange = async (req, res) => {
         var yearEnd = req.params.yearend;
         var queryString = req.query.fields;
 
+        if(yearStart > yearEnd) throw new Error(`The starting year (${yearStart}) must be before the ending year (${yearEnd}).`);
+        if(yearStart < 1979 || yearStart > 2019 || yearEnd < 1979 || yearEnd > 2019) throw new Error('The year range must be between 1979-2019.');
+
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
+                if(Totals.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -185,11 +209,16 @@ export const getSpecificState = async (req, res) => {
         var limit  = parseInt(req.query.limit);
         var queryString = req.query.fields;
 
+
+        //implement catch for wrong state
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1, state_abbr: 1}; 
 
             fieldsArr.forEach(element => {
+                if(States.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -212,11 +241,16 @@ export const getSpecificStateYear = async (req, res) => {
         var year = req.params.year;
         var queryString = req.query.fields;
 
+        if(year < 1979 || year > 2019) throw new Error('The specified year must be between 1979-2019.');
+
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1, state_abbr: 1}; 
 
             fieldsArr.forEach(element => {
+                if(States.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -240,11 +274,18 @@ export const getSpecificStateRange = async (req, res) => {
         var yearEnd = req.params.yearend;
         var queryString = req.query.fields;
 
+        if(yearStart > yearEnd) throw new Error(`The starting year (${yearStart}) must be before the ending year (${yearEnd}).`);
+        if(yearStart < 1979 || yearStart > 2019 || yearEnd < 1979 || yearEnd > 2019) throw new Error('The year range must be between 1979-2019.');
+        //test for wrong state id
+
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1, state_abbr: 1}; 
 
             fieldsArr.forEach(element => {
+                if(States.schema.pathType(element) === 'adhocOrUndefined') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
             const specificStateRange = await States.find({'state_abbr':state, year: { $gte: yearStart, $lte: yearEnd }}, fields);
