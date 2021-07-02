@@ -5,11 +5,15 @@ export const getData = async (req, res) => {
         var limit = parseInt(req.query.limit);
         var queryString = req.query.fields;
 
+        if(limit <= 0) throw new Error('The limit must be greater than 0.');
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
+                if(Arrests.schema.pathType(element) !== 'real') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -41,11 +45,15 @@ export const getSpecificYear = async (req, res) => {
         var year = req.params.year; 
         var queryString = req.query.fields;
 
+        if(year < 1995 || year > 2016) throw new Error('The year must be between 1995-2016.');
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
+                if(Arrests.schema.pathType(element) !== 'real') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
@@ -68,11 +76,17 @@ export const getYearRange = async (req, res) => {
         var yearEnd = req.params.yearend;
         var queryString = req.query.fields;
 
+        if(yearStart > yearEnd) throw new Error(`The starting year (${yearStart}) must be before the ending year (${yearEnd}).`);
+        if(yearStart < 1995 || yearStart > 2016 || yearEnd < 1995 || yearEnd > 2016) throw new Error('The year range must be between 1995-2016.');
+
+
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
+                if(Arrests.schema.pathType(element) !== 'real') throw new Error('Field not found. Please refer to object schema for correct fields.');
+
                 fields[element] = 1;
             });
 
