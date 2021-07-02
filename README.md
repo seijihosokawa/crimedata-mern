@@ -15,4 +15,8 @@ I aimed to make the documentation as readible and understandable as possible. En
 
 References:
   * https://nodejs.org/en/
+  * https://expressjs.com/
+  * https://reactjs.org/
+  * https://www.mongodb.com/
+  * https://crime-data-explorer.app.cloud.gov/pages/downloads
 
