@@ -210,7 +210,9 @@ export const getSpecificState = async (req, res) => {
         var queryString = req.query.fields;
 
 
-        //implement catch for wrong state
+        const stateValidation = await States.exists({state_abbr: state})
+        if(!stateValidation) throw new Error(`${state} is not a correct state abbreviation.`)
+
 
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
@@ -242,6 +244,9 @@ export const getSpecificStateYear = async (req, res) => {
         var queryString = req.query.fields;
 
         if(year < 1979 || year > 2019) throw new Error('The specified year must be between 1979-2019.');
+
+        const stateValidation = await States.exists({state_abbr: state})
+        if(!stateValidation) throw new Error(`${state} is not a correct state abbreviation.`)
 
 
         if(queryString !== undefined){
@@ -276,7 +281,9 @@ export const getSpecificStateRange = async (req, res) => {
 
         if(yearStart > yearEnd) throw new Error(`The starting year (${yearStart}) must be before the ending year (${yearEnd}).`);
         if(yearStart < 1979 || yearStart > 2019 || yearEnd < 1979 || yearEnd > 2019) throw new Error('The year range must be between 1979-2019.');
-        //test for wrong state id
+
+        const stateValidation = await States.exists({state_abbr: state})
+        if(!stateValidation) throw new Error(`${state} is not a correct state abbreviation.`)
 
 
         if(queryString !== undefined){
