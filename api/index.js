@@ -5,7 +5,8 @@ import dotenv from 'dotenv';
 
 import summaryRoutes from './routes/summary.js';
 import arrestsRoutes from './routes/arrestsNational.js'
-import DrugArrestsRoutes from './routes/drugArrests.js';
+import drugArrestsRoutes from './routes/drugArrests.js';
+import juvenileArrestsRoutes from './routes/juvenileArrests.js';
 
 const app = express();
 
@@ -16,7 +17,9 @@ app.use(cors());
 
 app.use('/v1/summary', summaryRoutes);
 app.use('/v1/arrests', arrestsRoutes);
-app.use('/v1/drug-arrests', DrugArrestsRoutes);
+app.use('/v1/drug-arrests', drugArrestsRoutes);
+app.use('/v1/juvenile-arrests', juvenileArrestsRoutes);
+
 
 
 dotenv.config();
