@@ -12,7 +12,7 @@ function ArrestsApiDocs() {
             <div id="arrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Arrest Data - Reported Number of Arrests by Crime</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported arrests for various offenses reported by participating law enforcement agencies. The arrests are by offense and broken down by age and sex or age and race. Not all agencies report race and/or ethnicity for arrests but they must report age and sex. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported arrests for the nation from 1995–2016.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported arrests for various offenses reported by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported arrests for the nation from 1995–2016.</p>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of arrests each year.</p>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the National Arrest data<a className="text-blue-600 hover:text-gray-300 pl-1" href="https://www.bjs.gov/arrests/templates/terms.cfm">definitions</a>.</p>
 
@@ -37,7 +37,7 @@ function ArrestsApiDocs() {
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years</p>
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:year</p>
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:yearstart/:yearend</p>                            
-                            <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /offenses</p>
+                            <p className="pl-4 pb-2 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /offenses</p>
                         </code>
                     </div>
                 </div>
@@ -170,7 +170,7 @@ function ArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="arrests/"></ApiCard>
-                    <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},{"year":1979,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064},"..."]}></ResponseCard>
+                    <ResponseCard response={[{"year":1995,"population":262803276,"total_arrests":15119800,"homicide":21230,"rape":34650,"robbery":171870,"aggravated_assault":568480,"burglary":386500,"larceny":1530200,"motor_vehicle_theft":191900,"arson":20000,"violent_crime":796250,"property_crime":2128600,"other_assault":1290400,"forgery":122300,"fraud":436400,"embezzlement":15200,"stolen_property":166500,"vandalism":311100,"weapons":243900,"prostitution":97700,"other_sex_offenses":94500,"drug_abuse":1476100,"gambling":19500,"against_family":142900,"dui":1436000,"liquor_laws":594900,"drunkenness":708100,"disorderly_conduct":748600,"vagrancy":25900,"other":3865400,"suspicion":12100,"curfew_loitering":149800},"..."]}></ResponseCard>
                 </div>
             </div>
             <div id="arrestsGetYearsList" className="flex flex-row w-full pt-12 pb-6">

@@ -12,8 +12,8 @@ function DrugArrestsApiDocs() {
             <div id="drugArrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Drug Arrest Data - Reported Number of Arrests by Crime</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported arrests for various offenses reported by participating law enforcement agencies. The arrests are by offense and broken down by age and sex or age and race. Not all agencies report race and/or ethnicity for arrests but they must report age and sex. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported arrests for the nation from 1995–2016.</p>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of arrests each year.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported drug arrests by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported drug arrests for the United States from 1995–2016.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of drug arrests each year.</p>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the National Arrest data<a className="text-blue-600 hover:text-gray-300 pl-1" href="https://www.bjs.gov/arrests/templates/terms.cfm">definitions</a>.</p>
 
                     <ul className="pt-6 pb-2 pr-2 text-gray-200">
@@ -37,14 +37,14 @@ function DrugArrestsApiDocs() {
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years</p>
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:year</p>
                             <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /years/:yearstart/:yearend</p>                            
-                            <p className="pl-4 pb-1 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /offenses</p>
+                            <p className="pl-4 pb-2 pt-1 rounded-b bg-gray-800 text-gray-300 text-sm"><span className="text-blue-600">GET</span> /offenses</p>
                         </code>
                     </div>
                 </div>
             </div>
             <div id="drugArrestsObject" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
-                    <h1 className="text-gray-100 text-3xl font-medium">The Arrests Object</h1>
+                    <h1 className="text-gray-100 text-3xl font-medium">The Drug Arrests Object</h1>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                         <div>
@@ -90,7 +90,7 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <div className="text-sm rounded border border-gray-500">
-                        <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Arrests Schema</p>
+                        <p className="pl-4 pt-1 pb-1 rounded-t bg-gray-700 text-gray-300" >Drug Arrests Schema</p>
                         <code>
                             <p className="pl-4 pb-3 pt-2 rounded-b bg-gray-800 text-gray-300 text-sm overflow-x-auto">
                                 <pre>{JSON.stringify(exampleDrugArrestsSchema, null, 2)}</pre>
@@ -101,7 +101,7 @@ function DrugArrestsApiDocs() {
             </div>
             <div id="drugArrestsFullData" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
-                    <h1 className="text-gray-100 text-3xl font-medium">Get Full Arrests Data</h1>
+                    <h1 className="text-gray-100 text-3xl font-medium">Get Full Drug Arrests Data</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the database.</p>
 
                     <div className="divide-y divide-gray-400">
@@ -113,7 +113,7 @@ function DrugArrestsApiDocs() {
 
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Arrests Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=dui,homicide,burglary</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=opioid_manufacture,synthetic_manufacture</code></p>
                         </div>
 
                     </div>
@@ -127,7 +127,7 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="drug-arrests/"></ApiCard>
-                    <ResponseCard response={[{"year":1979,"state_abbr":"AK","state_name":"Alaska","population":406000,"violent_crime":1994,"homicide":54,"rape":292,"robbery":445,"aggravated_assault":1203,"property_crime":23193,"burglary":5616,"larceny":15076,"motor_vehicle_theft":2501},{"year":1979,"state_abbr":"AL","state_name":"Alabama","population":3769000,"violent_crime":15578,"homicide":496,"rape":1037,"robbery":4127,"aggravated_assault":9918,"property_crime":144372,"burglary":48517,"larceny":83791,"motor_vehicle_theft":12064},"..."]}></ResponseCard>
+                    <ResponseCard response={[{"year":1994,"total_arrests":1121002,"total_manufacture":284898,"opioid_manufacture":178318,"marijuana_manufacture":61448,"synthetic_manufacture":5672,"other_manufacture":38658,"total_possess":782761,"opioid_possess":321740,"marijuana_possess":316501,"synthetic_possess":12811,"other_possess":127051},"..."]}></ResponseCard>
                 </div>
             </div>
             <div id="drugArrestsGetYearsList" className="flex flex-row w-full pt-12 pb-6">
@@ -151,7 +151,7 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="drug-arrests/years"></ApiCard>
-                    <ResponseCard response={[1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]}></ResponseCard>
+                    <ResponseCard response={[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]}></ResponseCard>
                 </div>
             </div>
             <div id="drugArrestsGetSpecificYear" className="flex flex-row w-full pt-12 pb-6">
@@ -164,7 +164,7 @@ function DrugArrestsApiDocs() {
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Arrests Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=opioid_manufacture,synthetic_manufacture</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -178,7 +178,7 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="drug-arrests/years/:year"></ApiCard>
-                    <ResponseCard response={[{"year":2014,"population":318907401,"total_arrests":11205833,"homicide":10571,"rape":21007,"robbery":94403,"aggravated_assault":372685,"burglary":237974,"larceny":1238190,"motor_vehicle_theft":68422,"arson":9394,"violent_crime":498666,"property_crime":1553980,"other_assault":1093258,"forgery":56783,"fraud":141293,"embezzlement":16227,"stolen_property":88946,"vandalism":198400,"weapons":140713,"prostitution":47598,"other_sex_offenses":55456,"drug_abuse":1561231,"gambling":5637,"against_family":102336,"dui":1117852,"liquor_laws":321125,"drunkenness":414854,"disorderly_conduct":436014,"vagrancy":27380,"other":3274430,"suspicion":1310,"curfew_loitering":53654}]}></ResponseCard>
+                    <ResponseCard response={[{"year":2008,"total_arrests":1340654,"total_manufacture":228058,"opioid_manufacture":98333,"marijuana_manufacture":71418,"synthetic_manufacture":19505,"other_manufacture":38803,"total_possess":1058663,"opioid_possess":256290,"marijuana_possess":572682,"synthetic_possess":43683,"other_possess":186014}]}></ResponseCard>
                 </div>
             </div>
             <div id="drugArrestsGetYearRange" className="flex flex-row w-full pt-12 pb-6">
@@ -192,7 +192,7 @@ function DrugArrestsApiDocs() {
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at arrests Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=larceny,homicide,violent_crime</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=opioid_manufacture,synthetic_manufacture</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -205,12 +205,12 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="drug-arrests/years/:yearstart/:yearend"></ApiCard>
-                    <ResponseCard response={[{"year":2003,"population":290788976,"total_arrests":13639479,"homicide":13190,"rape":26350,"robbery":107553,"aggravated_assault":449933,"burglary":290956,"larceny":1145074,"motor_vehicle_theft":152934,"arson":16163,"violent_crime":597026,"property_crime":1605127,"other_assault":1246698,"forgery":111823,"fraud":299138,"embezzlement":16826,"stolen_property":126775,"vandalism":273431,"weapons":167972,"prostitution":75190,"other_sex_offenses":91546,"drug_abuse":1678192,"gambling":10954,"against_family":136034,"dui":1448148,"liquor_laws":612079,"drunkenness":548616,"disorderly_conduct":639371,"vagrancy":28948,"other":3665543,"suspicion":7163,"curfew_loitering":136461},"...",{"year":2005,"population":296507061,"total_arrests":14094186,"homicide":14062,"rape":25528,"robbery":114616,"aggravated_assault":449297,"burglary":298835,"larceny":1146696,"motor_vehicle_theft":147459,"arson":16337,"violent_crime":603503,"property_crime":1609327,"other_assault":1301392,"forgery":118455,"fraud":321521,"embezzlement":18970,"stolen_property":133856,"vandalism":279562,"weapons":193469,"prostitution":84891,"other_sex_offenses":91625,"drug_abuse":1846351,"gambling":11180,"against_family":129128,"dui":1371919,"liquor_laws":597838,"drunkenness":556167,"disorderly_conduct":678231,"vagrancy":33227,"other":3863785,"suspicion":3764,"curfew_loitering":140835}]}></ResponseCard>
+                    <ResponseCard response={[{"year":1999,"total_arrests":1220464,"total_manufacture":246986,"opioid_manufacture":136960,"marijuana_manufacture":66108,"synthetic_manufacture":12345,"other_manufacture":31480,"total_possess":893208,"opioid_possess":278052,"marijuana_possess":462849,"synthetic_possess":20260,"other_possess":132007},"...",{"year":2002,"total_arrests":1190902,"total_manufacture":218961,"opioid_manufacture":107225,"marijuana_manufacture":59606,"synthetic_manufacture":15376,"other_manufacture":36718,"total_possess":894215,"opioid_possess":249694,"marijuana_possess":441313,"synthetic_possess":32267,"other_possess":170878}]}></ResponseCard>
                 </div>
             </div>
             <div id="drugArrestsGetOffenses" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
-                    <h1 className="text-gray-100 text-3xl font-medium">Get List of Offenses</h1>
+                    <h1 className="text-gray-100 text-3xl font-medium">Get List of Drug Offenses</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an array of offenses cataloged within the National Arrest Data in the United States.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
@@ -228,7 +228,8 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="drug-arrests/offenses"></ApiCard>
-                    <ResponseCard response={["homicide","rape","robbery","aggravated_assault","burglary","larceny","motor_vehicle_theft","arson","violent_crime","property_crime","other_assault","forgery","fraud","embezzlement","stolen_property","vandalism","weapons","prostitution","other_sex_offenses","drug_abuse","gambling"]}></ResponseCard>
+                    <ResponseCard response={["total_arrests","total_manufacture","opioid_manufacture","marijuana_manufacture","synthetic_manufacture",
+        "other_manufacture","total_possess","opioid_possess","marijuana_possess","synthetic_possess","other_possess"]}></ResponseCard>
                 </div>
             </div>
         </div>
