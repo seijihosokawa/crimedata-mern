@@ -3,6 +3,7 @@ import Navbar from './Navbar.js';
 import MobileNavConatiner from './MobileNavContainer';
 import SummaryApiDocs from './SummaryApiDocs.js';
 import ArrestsApiDocs from './ArrestsApiDocs.js'
+import DrugArrestsApiDocs from './DrugArrestApiDocs.js';
 import './style.css';
 
 
@@ -29,6 +30,7 @@ const App = () => {
                         <ul className="text-gray-200">
                             <li> - Summary Reporting System</li>
                             <li> - National Arrest Data</li>
+                            <li> - National Drug Arrest Data</li>
                         </ul>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">
@@ -73,7 +75,9 @@ const App = () => {
                 </div>
                 <SummaryApiDocs></SummaryApiDocs>
                 <div className="h-1 w-full bg-gray-200"></div>
-                <ArrestsApiDocs></ArrestsApiDocs>                
+                <ArrestsApiDocs></ArrestsApiDocs>
+                <div className="h-1 w-full bg-gray-200"></div>
+                <DrugArrestsApiDocs></DrugArrestsApiDocs>     
             </div>
         </div>
     )

@@ -12,7 +12,7 @@ export const getData = async (req, res) => {
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
-                if(Arrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
+                if(DrugArrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
 
                 fields[element] = 1;
             });
@@ -52,7 +52,7 @@ export const getSpecificYear = async (req, res) => {
             let fields = { _id: 0, year:1}; 
 
             fieldsArr.forEach(element => {
-                if(Arrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
+                if(DrugArrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
 
                 fields[element] = 1;
             });
