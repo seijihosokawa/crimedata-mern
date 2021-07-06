@@ -14,10 +14,9 @@ function DrugArrestsApiDocs() {
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Drug Arrest Data - Reported Number of Arrests by Crime</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported drug arrests by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported drug arrests for the United States from 1995–2016.</p>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of drug arrests each year.</p>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the National Arrest data<a className="text-blue-600 hover:text-gray-300 pl-1" href="https://www.bjs.gov/arrests/templates/terms.cfm">definitions</a>.</p>
 
                     <ul className="pt-6 pb-2 pr-2 text-gray-200">
-                        <li> - Data Type: National Arrest Data</li>
+                        <li> - Data Type: National Drug Arrest Data</li>
                         <li> - Years: 1995-2016</li>
                         <li> - Last Modified: January 1, 2017</li>
                     </ul>
@@ -61,30 +60,26 @@ function DrugArrestsApiDocs() {
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">total_manufacture <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The willful killing of one person by another or the killing of another person through gross negligence.
-                                Also includes the non-violent offense of Controlled Substance Homicide.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The total arrests for drug abuse violations for the sale or manufacturing of a controlled substance.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">opioid_manufacture <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The definition of rape changed on <a className="text-blue-600 hover:text-gray-300" href="https://www.justice.gov/archives/opa/blog/updated-definition-rape">January 6, 2012 </a>
-                                to <span className="italic">"the penetration, no matter how slight, of the vagina or anus with any body part or object, or oral penetration by a sex organ of another person, without the consent of the victim." </span>
-                                The old definition of rape (before 2012): <span className="italic">"the carnal knowledge of a female forcibly and against her will. Also includes attempts to commit forcible rape."</span></p>
+                            <p className="pb-2 text-gray-400 text-sm">The total arrests for the sale or manufacturing of heroin or cocaine and their derivatives.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">marijuana_manufacture <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The taking or attempting to take anything of value from the care, custody, or control of
-                                a person or persons by force or the threat of force or violence and/or by putting the victim in fear.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The total arrests for the sale or manufacturing of marijuana.</p>
                         </div>
                         <div>
                             <p className="pt-6 pb-2 pr-2 text-blue-200">More Attributes</p>
                         </div>
-                        <ObjectAttribute name="synthetic_manufacture" type="integer" definition="The theft or attempted theft of a motor vehicle."></ObjectAttribute>
-                        <ObjectAttribute name="other_manufacture" type="integer" definition="The theft or attempted theft of a motor vehicle."></ObjectAttribute>
-                        <ObjectAttribute name="total_possess" type="integer" definition="Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc."></ObjectAttribute>
-                        <ObjectAttribute name="opioid_possess" type="integer" definition="Includes the offenses of murder and nonnegligent manslaughter, forcible rape, robbery, and aggravated assault. Post-2012, the violent crime index excludes rape arrests."></ObjectAttribute>
-                        <ObjectAttribute name="marijuana_possess" type="integer" definition="The theft or attempted theft of a motor vehicle."></ObjectAttribute>
-                        <ObjectAttribute name="synthetic_possess" type="integer" definition="Any willful or malicious burning or attempt to burn, with or without intent to defraud, a dwelling house, public building, motor vehicle or aircraft, personal property of another, etc."></ObjectAttribute>
-                        <ObjectAttribute name="other_possess" type="integer" definition="Includes the offenses of murder and nonnegligent manslaughter, forcible rape, robbery, and aggravated assault. Post-2012, the violent crime index excludes rape arrests."></ObjectAttribute>
+                        <ObjectAttribute name="synthetic_manufacture" type="integer" definition="The total arrests for the sale or manufacturing of synthetic or manufactured drugs."></ObjectAttribute>
+                        <ObjectAttribute name="other_manufacture" type="integer" definition="The total arrests for the sale or manufacturing of other dangerous nonnarcotic drugs."></ObjectAttribute>
+                        <ObjectAttribute name="total_possess" type="integer" definition="The total arrests for drug abuse violations for the possession of a controlled substance."></ObjectAttribute>
+                        <ObjectAttribute name="opioid_possess" type="integer" definition="The total arrests for the possession of heroin or cocaine and their derivatives."></ObjectAttribute>
+                        <ObjectAttribute name="marijuana_possess" type="integer" definition="The total arrests for the possession of marijuana."></ObjectAttribute>
+                        <ObjectAttribute name="synthetic_possess" type="integer" definition="The total arrests for the possession of synthetic or manufactured drugs.."></ObjectAttribute>
+                        <ObjectAttribute name="other_possess" type="integer" definition="The total arrests for the possession of other dangerous nonnarcotic drugs."></ObjectAttribute>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
@@ -228,8 +223,7 @@ function DrugArrestsApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="drug-arrests/offenses"></ApiCard>
-                    <ResponseCard response={["total_arrests","total_manufacture","opioid_manufacture","marijuana_manufacture","synthetic_manufacture",
-        "other_manufacture","total_possess","opioid_possess","marijuana_possess","synthetic_possess","other_possess"]}></ResponseCard>
+                    <ResponseCard response={["total_arrests","total_manufacture","opioid_manufacture","marijuana_manufacture","synthetic_manufacture","other_manufacture","total_possess","opioid_possess","marijuana_possess","synthetic_possess","other_possess"]}></ResponseCard>
                 </div>
             </div>
         </div>

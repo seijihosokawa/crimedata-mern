@@ -73,6 +73,7 @@ const App = () => {
                         </div>
                     </div>   
                 </div>
+                <div className="h-1 w-full bg-gray-200"></div>
                 <SummaryApiDocs></SummaryApiDocs>
                 <div className="h-1 w-full bg-gray-200"></div>
                 <ArrestsApiDocs></ArrestsApiDocs>
