@@ -9,7 +9,7 @@ export const getData = async (req, res) => {
 
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
-            let fields = { _id: 0, year:1}; 
+            let fields = { _id: 0, year:1, offense_name: 1}; 
 
             fieldsArr.forEach(element => {
                 if(JuvenileArrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
@@ -49,7 +49,7 @@ export const getSpecificYear = async (req, res) => {
 
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
-            let fields = { _id: 0, year:1}; 
+            let fields = { _id: 0, year:1, offense_name: 1}; 
 
             fieldsArr.forEach(element => {
                 if(JuvenileArrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
@@ -82,7 +82,7 @@ export const getYearRange = async (req, res) => {
 
         if(queryString !== undefined){
             let fieldsArr = queryString.split(',');
-            let fields = { _id: 0, year:1}; 
+            let fields = { _id: 0, year:1, offense_name: 1}; 
 
             fieldsArr.forEach(element => {
                 if(JuvenileArrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
@@ -107,8 +107,48 @@ export const getOffenses = async (req, res) => {
     try {
         const juvenileOffenses = await JuvenileArrests.find().distinct('offense_name');
 
+        res.status(200).json(juvenileOffenses);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
+
+export const getOffenseCodes = async (req, res) => {
+    try {
+        const juvenileOffenses = await JuvenileArrests.find().distinct('offense_code');
 
         res.status(200).json(juvenileOffenses);
+    } catch (error) {
+        res.status(404).json({ message: error.message });
+    }
+}
+
+export const getSpecificOffense = async (req, res) => {
+    try {
+        var offense = req.params.offense.toUpperCase(); 
+        var queryString = req.query.fields;
+
+        const offenseValidation = await JuvenileArrests.exists({offense_code: offense})
+        if(!offenseValidation) throw new Error(`${offense} is not a correct offense code.`)
+
+        if(queryString !== undefined){
+            let fieldsArr = queryString.split(',');
+            let fields = { _id: 0, year:1, offense_name: 1}; 
+
+            fieldsArr.forEach(element => {
+                if(JuvenileArrests.schema.pathType(element) === 'adhocOrUndefined') throw new Error(`'${element}' field not found. Please refer to object schema for correct fields.`);
+
+                fields[element] = 1;
+            });
+
+            const arrestsYearsData = await JuvenileArrests.find({ offense_code: [offense]}, fields);
+    
+            res.status(200).json(arrestsYearsData);
+        }else{
+            const arrestsYearsData = await JuvenileArrests.find({ offense_code: [offense]}, {_id: 0});
+
+            res.status(200).json(arrestsYearsData);
+        }
     } catch (error) {
         res.status(404).json({ message: error.message });
     }
