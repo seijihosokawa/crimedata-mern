@@ -7,6 +7,8 @@ A Crimes Data REST API is focused around delivering U.S. Crime data from various
 
 I aimed to make the documentation as readible and understandable as possible. Enjoy!
 
+[Diagrams are located in the assets folder](https://github.com/seijihosokawa/crimedata-mern/tree/master/assets)
+
 [Click here to see the documentation](https://crimedata-mern.vercel.app/)
 
 ![Screenshot](assets/crimedata.png)
