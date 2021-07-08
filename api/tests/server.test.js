@@ -95,18 +95,113 @@ describe("Testing the summary API endpoint", () => {
 
 		expect(response.status).toBe(200);
 		expect(response.body.length).toEqual(51);
+		expect(Array.isArray(response.body)).toBeTruthy();
 		expect(response.body).toEqual(["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"]);
+
+	});
+	it("GET /states/:id route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/summary/states/ct');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].state_abbr).toEqual("CT");
+		expect(response.body[0].state_name).toEqual("Connecticut");
+	});
+	it("GET /states/:id/:year route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/summary/states/fl/2005');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].year).toEqual(2005);
+		expect(response.body[0].state_abbr).toEqual("FL");
+		expect(response.body[0].state_name).toEqual("Florida");
+	});
+	it("GET /states/:id/:yearstart/:yearend route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/summary/states/nj/2005/2008');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].year).toEqual(2005);
+		expect(response.body[0].state_abbr).toEqual("NJ");
+		expect(response.body[0].state_name).toEqual("New Jersey");
+		expect(response.body[response.body.length-1].year).toEqual(2008);
+	});
+	it("GET /states-list route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/summary/states-list');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(51);
+		expect(Array.isArray(response.body)).toBeTruthy();
+
+	});
+	it("GET /crimes route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/summary/crimes');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(9);
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body).toEqual(["violent_crime","homicide","rape","robbery","aggravated_assault","property_crime","burglary","larceny","motor_vehicle_theft"]);
 
 	});
 });
 
 describe("Testing the arrests API endpoint", () => {
 
-	it("GET base route and returns true for status", async () => {
+	it("GET base route and returns 200 for status", async () => {
 
-		const response = await supertest(app).get('/v1/arrests');
+		const response = await supertest(app).get('/v1/arrests?limit=1');
 
 		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(1);
+		expect(response.body[0].year).toEqual(1995);
+		expect(response.body[0].other).toEqual(3865400);
+		expect(response.body[0].total_arrests).toEqual(15119800);
+
+	});
+	it("GET /years route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/arrests/years');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(22); 
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body).toEqual([1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]);
+
+	});
+	it("GET /years/:year route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/arrests/years/2001');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].year).toEqual(2001);
+		expect(response.body[0].homicide).toEqual(13653);
+		expect(response.body[0].total_arrests).toEqual(13699254);
+	});
+	it("GET /years/:year route and return 404 error for wrong field name", async () => {
+
+		const response = await supertest(app).get('/v1/arrests/years/2001?fields=random');
+
+		expect(response.status).toBe(404);
+		expect(response.body).toEqual({"message":"'random' field not found. Please refer to object schema for correct fields."});
+
+	});
+	it("GET /years/:year route and return 404 error for year out of range", async () => {
+
+		const response = await supertest(app).get('/v1/arrests/years/1992');
+
+		expect(response.status).toBe(404);
+		expect(response.body).toEqual({"message":"The year must be between 1995-2016."});
+
+	});
+	it("GET /years/:yearstart/:yearend route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/arrests/years/2001/2003?fields=robbery');
+
+		expect(response.status).toBe(200);
+		expect(response.body).toEqual([{"year":2001,"robbery":108400},{"year":2002,"robbery":105774},{"year":2003,"robbery":107553}]);
+
 	});
 
 });
