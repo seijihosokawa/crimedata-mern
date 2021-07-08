@@ -203,16 +203,83 @@ describe("Testing the arrests API endpoint", () => {
 		expect(response.body).toEqual([{"year":2001,"robbery":108400},{"year":2002,"robbery":105774},{"year":2003,"robbery":107553}]);
 
 	});
+	it("GET /offenses route and returns 200 for status", async () => {
 
-});
-
-describe("Testing the Arrests API endpoint", () => {
-
-	it("GET base route and returns true for status", async () => {
-
-		const response = await supertest(app).get('/v1/drug-arrests');
+		const response = await supertest(app).get('/v1/arrests/offenses');
 
 		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(21);
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body).toEqual(["homicide","rape","robbery","aggravated_assault","burglary","larceny","motor_vehicle_theft","arson","violent_crime","property_crime","other_assault","forgery","fraud","embezzlement","stolen_property","vandalism","weapons","prostitution","other_sex_offenses","drug_abuse","gambling"]);
+
+	});
+});
+
+describe("Testing the drug arrests API endpoint", () => {
+
+	it("GET base route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests?limit=1');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(1);
+		expect(response.body[0].year).toEqual(1994);
+		expect(response.body[0].total_possess).toEqual(782761);
+		expect(response.body[0].total_arrests).toEqual(1121002);
+
+	});
+	it("GET /years route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests/years');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(23); 
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body).toEqual([1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]);
+
+	});
+	it("GET /years/:year route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests/years/2001');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].year).toEqual(2001);
+		expect(response.body[0].total_possess).toEqual(945775);
+		expect(response.body[0].total_arrests).toEqual(1266254);
+	});
+	it("GET /years/:year route and return 404 error for wrong field name", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests/years/2001?fields=random');
+
+		expect(response.status).toBe(404);
+		expect(response.body).toEqual({"message":"'random' field not found. Please refer to object schema for correct fields."});
+
+	});
+	it("GET /years/:year route and return 404 error for year out of range", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests/years/1992');
+
+		expect(response.status).toBe(404);
+		expect(response.body).toEqual({"message":"The year must be between 1994-2016."});
+
+	});
+	it("GET /years/:yearstart/:yearend route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests/years/2001/2003?fields=total_manufacture');
+
+		expect(response.status).toBe(200);
+		expect(response.body).toEqual([{"year":2001,"total_manufacture":247246},{"year":2002,"total_manufacture":218961},{"year":2003,"total_manufacture":227672}]);
+
+	});
+	it("GET /offenses route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/drug-arrests/offenses');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(11);
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body).toEqual(["total_arrests","total_manufacture","opioid_manufacture","marijuana_manufacture","synthetic_manufacture","other_manufacture","total_possess","opioid_possess","marijuana_possess","synthetic_possess","other_possess"]);
+
 	});
 
 });
