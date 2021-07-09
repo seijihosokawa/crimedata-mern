@@ -188,7 +188,7 @@ function SummaryApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Specific Years</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated for each state
-                        from the year requested. The years this endpoint will return are 1979-2019. Any other year will return an empty object.</p>
+                        from the year requested. The years this endpoint will return are 1979-2019. Any other year will return an error.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
@@ -215,7 +215,7 @@ function SummaryApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Range of Years</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the Summary Reporting System for each state
-                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed
+                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an error. The years passed
                         for the variables yearstart and yearend are inclusive.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>

@@ -32,6 +32,7 @@ const App = () => {
                             <li> - Summary Reporting System</li>
                             <li> - National Arrest Data</li>
                             <li> - National Drug Arrest Data</li>
+                            <li> - National Juvenile Arrest Data</li>
                         </ul>
                     </div>
                     <div className="hidden md:block container w-1/2 p-4">

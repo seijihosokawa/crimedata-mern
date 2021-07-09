@@ -12,12 +12,12 @@ function DrugArrestsApiDocs() {
             <div id="drugArrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Drug Arrest Data - Reported Number of Arrests by Crime</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported drug arrests by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported drug arrests for the United States from 1995–2016.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported drug arrests by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported drug arrests for the United States from 1994–2016.</p>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of drug arrests each year.</p>
 
                     <ul className="pt-6 pb-2 pr-2 text-gray-200">
                         <li> - Data Type: National Drug Arrest Data</li>
-                        <li> - Years: 1995-2016</li>
+                        <li> - Years: 1994-2016</li>
                         <li> - Last Modified: January 1, 2017</li>
                     </ul>
                 </div>
@@ -78,7 +78,7 @@ function DrugArrestsApiDocs() {
                         <ObjectAttribute name="total_possess" type="integer" definition="The total arrests for drug abuse violations for the possession of a controlled substance."></ObjectAttribute>
                         <ObjectAttribute name="opioid_possess" type="integer" definition="The total arrests for the possession of heroin or cocaine and their derivatives."></ObjectAttribute>
                         <ObjectAttribute name="marijuana_possess" type="integer" definition="The total arrests for the possession of marijuana."></ObjectAttribute>
-                        <ObjectAttribute name="synthetic_possess" type="integer" definition="The total arrests for the possession of synthetic or manufactured drugs.."></ObjectAttribute>
+                        <ObjectAttribute name="synthetic_possess" type="integer" definition="The total arrests for the possession of synthetic or manufactured drugs."></ObjectAttribute>
                         <ObjectAttribute name="other_possess" type="integer" definition="The total arrests for the possession of other dangerous nonnarcotic drugs."></ObjectAttribute>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ function DrugArrestsApiDocs() {
             <div id="drugArrestsFullData" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Full Drug Arrests Data</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the database.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the drug arrests dataset.</p>
 
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
@@ -153,7 +153,7 @@ function DrugArrestsApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Specific Year</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an object detailing the amount of national arrrests by each offense
-                        from the year requested. The years this endpoint will return are 1995-2016. Any other year will return an empty object.</p>
+                        from the year requested. The years this endpoint will return are 1995-2016. Any other year will return an error.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
@@ -180,7 +180,7 @@ function DrugArrestsApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Range of Years</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the arrests Reporting System for each state
-                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed
+                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an error. The years passed
                         for the variables yearstart and yearend are inclusive.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>

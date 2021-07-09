@@ -145,7 +145,7 @@ function ArrestsApiDocs() {
             <div id="arrestsFullData" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Full Arrests Data</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the database.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the arrersts dataset.</p>
 
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
@@ -201,7 +201,7 @@ function ArrestsApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Specific Year</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an object detailing the amount of national arrrests by each offense
-                        from the year requested. The years this endpoint will return are 1995-2016. Any other year will return an empty object.</p>
+                        from the year requested. The years this endpoint will return are 1995-2016. Any other year will return an error.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
@@ -228,7 +228,7 @@ function ArrestsApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Range of Years</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the arrests Reporting System for each state
-                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed
+                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an error. The years passed
                         for the variables yearstart and yearend are inclusive.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>

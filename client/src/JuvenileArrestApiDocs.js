@@ -5,19 +5,19 @@ import ObjectAttribute from "./ObjectAttribute.js";
 
 
 function JuvenileArrestApiDocs() {
-    let exampleJuvenileArrestsSchema = {"year":1994,"total_arrests":1121002,"total_manufacture":284898,"opioid_manufacture":178318,"marijuana_manufacture":61448,"synthetic_manufacture":5672,"other_manufacture":38658,"total_possess":782761,"opioid_possess":321740,"marijuana_possess":316501,"synthetic_possess":12811,"other_possess":127051};
+    let exampleJuvenileArrestsSchema = {"year":1994,"offense_code":"ARSON","offense_name":"Arson","total_male":8050,"total_female":1133,"m_0_9":1030,"m_10_12":1808,"m_13_14":2618,"m_15":1060,"m_16":846,"m_17":688,"f_0_9":108,"f_10_12":214,"f_13_14":452,"f_15":158,"f_16":107,"f_17":94,"white":7319,"black":1649,"asian_pacific_islander":93,"american_indian":98};
 
     return (
         <div className="divide-y divide-gray-200">
             <div id="juvenileArrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Juvenile Arrest Data - Reported Number of Arrests by Crime</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported drug arrests by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of reported drug arrests for the United States from 1995–2016.</p>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of drug arrests each year.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains the yearly number of reported juvenile arrests by participating law enforcement agencies. Note that only agencies that have reported arrests for 12 months of the year are represented in the annual counts that are included in the database. This dataset shows the totals of juvenilte arrests for the United States from 1994–2016.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the number of juvenile arrests each year by offense.</p>
 
                     <ul className="pt-6 pb-2 pr-2 text-gray-200">
                         <li> - Data Type: National Juvenile Arrest Data</li>
-                        <li> - Years: 1995-2016</li>
+                        <li> - Years: 1994-2016</li>
                         <li> - Last Modified: January 1, 2017</li>
                     </ul>
                 </div>
@@ -46,7 +46,7 @@ function JuvenileArrestApiDocs() {
             </div>
             <div id="juvenileArrestsObject" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
-                    <h1 className="text-gray-100 text-3xl font-medium">The Drug Arrests Object</h1>
+                    <h1 className="text-gray-100 text-3xl font-medium">The Juvenile Arrests Object</h1>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Attributes</p>
                         <div>
@@ -59,39 +59,39 @@ function JuvenileArrestApiDocs() {
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">offense_code <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The total number of arrests in the United States of that year.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The abbreviated offense code for the given offense.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">offense_name <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The total arrests for drug abuse violations for the sale or manufacturing of a controlled substance.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The full name of the criminal offense.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">total_male <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The total arrests for the sale or manufacturing of heroin or cocaine and their derivatives.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The total males arrested for the specified offense.</p>
                         </div>
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">total_female <span className="pl-2 text-gray-400 text-sm">integer</span></p>
-                            <p className="pb-2 text-gray-400 text-sm">The total arrests for the sale or manufacturing of marijuana.</p>
+                            <p className="pb-2 text-gray-400 text-sm">The total females arrested for the specified offense.</p>
                         </div>
                         <div>
                             <p className="pt-6 pb-2 pr-2 text-blue-200">More Attributes</p>
                         </div>
-                        <ObjectAttribute name="m_0_9" type="integer" definition="The total arrests for the sale or manufacturing of synthetic or manufactured drugs."></ObjectAttribute>
-                        <ObjectAttribute name="m_10_12" type="integer" definition="The total arrests for the sale or manufacturing of other dangerous nonnarcotic drugs."></ObjectAttribute>
-                        <ObjectAttribute name="m_13_14" type="integer" definition="The total arrests for drug abuse violations for the possession of a controlled substance."></ObjectAttribute>
-                        <ObjectAttribute name="m_15" type="integer" definition="The total arrests for the possession of heroin or cocaine and their derivatives."></ObjectAttribute>
-                        <ObjectAttribute name="m_16" type="integer" definition="The total arrests for the possession of marijuana."></ObjectAttribute>
-                        <ObjectAttribute name="m_17" type="integer" definition="The total arrests for the possession of synthetic or manufactured drugs.."></ObjectAttribute>
-                        <ObjectAttribute name="f_0_9" type="integer" definition="The total arrests for the sale or manufacturing of synthetic or manufactured drugs."></ObjectAttribute>
-                        <ObjectAttribute name="f_10_12" type="integer" definition="The total arrests for the sale or manufacturing of other dangerous nonnarcotic drugs."></ObjectAttribute>
-                        <ObjectAttribute name="f_13_14" type="integer" definition="The total arrests for drug abuse violations for the possession of a controlled substance."></ObjectAttribute>
-                        <ObjectAttribute name="f_15" type="integer" definition="The total arrests for the possession of heroin or cocaine and their derivatives."></ObjectAttribute>
-                        <ObjectAttribute name="f_16" type="integer" definition="The total arrests for the possession of marijuana."></ObjectAttribute>
-                        <ObjectAttribute name="f_17" type="integer" definition="The total arrests for the possession of synthetic or manufactured drugs.."></ObjectAttribute>
-                        <ObjectAttribute name="white" type="integer" definition="The total arrests for the possession of other dangerous nonnarcotic drugs."></ObjectAttribute>
-                        <ObjectAttribute name="black" type="integer" definition="The total arrests for the possession of other dangerous nonnarcotic drugs."></ObjectAttribute>
-                        <ObjectAttribute name="asian_pacific_islander" type="integer" definition="The total arrests for the possession of other dangerous nonnarcotic drugs."></ObjectAttribute>
-                        <ObjectAttribute name="american_indian" type="integer" definition="The total arrests for the possession of other dangerous nonnarcotic drugs."></ObjectAttribute>
+                        <ObjectAttribute name="m_0_9" type="integer" definition="The total males arrested for the specified offense between the ages 0-9."></ObjectAttribute>
+                        <ObjectAttribute name="m_10_12" type="integer" definition="The total males arrested for the specified offense between the ages 10-12."></ObjectAttribute>
+                        <ObjectAttribute name="m_13_14" type="integer" definition="The total males arrested for the specified offense between the ages 13-14."></ObjectAttribute>
+                        <ObjectAttribute name="m_15" type="integer" definition="The total 15 year old males arrested for the specified offense."></ObjectAttribute>
+                        <ObjectAttribute name="m_16" type="integer" definition="The total 16 year old males arrested for the specified offense."></ObjectAttribute>
+                        <ObjectAttribute name="m_17" type="integer" definition="The total 17 year old males arrested for the specified offense."></ObjectAttribute>
+                        <ObjectAttribute name="f_0_9" type="integer" definition="The total females arrested for the specified offense between the ages 0-9."></ObjectAttribute>
+                        <ObjectAttribute name="f_10_12" type="integer" definition="The total females arrested for the specified offense between the ages 10-12."></ObjectAttribute>
+                        <ObjectAttribute name="f_13_14" type="integer" definition="The total females arrested for the specified offense between the ages 13-14."></ObjectAttribute>
+                        <ObjectAttribute name="f_15" type="integer" definition="The total 15 year old females arrested for the specified offense."></ObjectAttribute>
+                        <ObjectAttribute name="f_16" type="integer" definition="The total 16 year old females arrested for the specified offense."></ObjectAttribute>
+                        <ObjectAttribute name="f_17" type="integer" definition="The total 17 year old females arrested for the specified offense."></ObjectAttribute>
+                        <ObjectAttribute name="white" type="integer" definition="The total number of arrests of people belonging to the group/race: White"></ObjectAttribute>
+                        <ObjectAttribute name="black" type="integer" definition="The total number of arrests of people belonging to the group/race: Black"></ObjectAttribute>
+                        <ObjectAttribute name="asian_pacific_islander" type="integer" definition="The total number of arrests of people belonging to the group/race: Asian/Pacific Islander"></ObjectAttribute>
+                        <ObjectAttribute name="american_indian" type="integer" definition="The total number of arrests of people belonging to the group/race: American Indian"></ObjectAttribute>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
@@ -109,7 +109,7 @@ function JuvenileArrestApiDocs() {
             <div id="juvenileArrestsFullData" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Full Drug Arrests Data</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the database.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives all objects within the juvinile arrests dataset.</p>
 
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
@@ -127,14 +127,14 @@ function JuvenileArrestApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects with national arrests data between 1995-2016. </p>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects with national juvinile arrests data between 1995-2016. </p>
                         </div>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="juvenile-arrests/"></ApiCard>
-                    <ResponseCard response={[{"year":1994,"total_arrests":1121002,"total_manufacture":284898,"opioid_manufacture":178318,"marijuana_manufacture":61448,"synthetic_manufacture":5672,"other_manufacture":38658,"total_possess":782761,"opioid_possess":321740,"marijuana_possess":316501,"synthetic_possess":12811,"other_possess":127051},"..."]}></ResponseCard>
+                    <ResponseCard response={[{"year":1994,"offense_code":"ARSON","offense_name":"Arson","total_male":8050,"total_female":1133,"m_0_9":1030,"m_10_12":1808,"m_13_14":2618,"m_15":1060,"m_16":846,"m_17":688,"f_0_9":108,"f_10_12":214,"f_13_14":452,"f_15":158,"f_16":107,"f_17":94,"white":7319,"black":1649,"asian_pacific_islander":93,"american_indian":98},"..."]}></ResponseCard>
                 </div>
             </div>
             <div id="juvenileArrestsGetYearsList" className="flex flex-row w-full pt-12 pb-6">
@@ -165,7 +165,7 @@ function JuvenileArrestApiDocs() {
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Specific Year</h1>
                     <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an object detailing the amount of national arrrests by each offense
-                        from the year requested. The years this endpoint will return are 1995-2016. Any other year will return an empty object.</p>
+                        from the year requested. The years this endpoint will return are 1995-2016. Any other year will return an error.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
@@ -177,22 +177,21 @@ function JuvenileArrestApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes committed for each state
-                                in the year requested. The length will be 50 for the 50 states within the United States.</p>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the juvenile arrests by offense in the year requested.</p>
                         </div>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="juvenile-arrests/years/:year"></ApiCard>
-                    <ResponseCard response={[{"year":2008,"total_arrests":1340654,"total_manufacture":228058,"opioid_manufacture":98333,"marijuana_manufacture":71418,"synthetic_manufacture":19505,"other_manufacture":38803,"total_possess":1058663,"opioid_possess":256290,"marijuana_possess":572682,"synthetic_possess":43683,"other_possess":186014}]}></ResponseCard>
+                    <ResponseCard response={[{"year":2007,"offense_code":"ARSON","offense_name":"Arson","total_male":4956,"total_female":662,"m_0_9":338,"m_10_12":930,"m_13_14":1671,"m_15":846,"m_16":628,"m_17":543,"f_0_9":25,"f_10_12":105,"f_13_14":243,"f_15":119,"f_16":107,"f_17":63,"white":4281,"black":1173,"asian_pacific_islander":92,"american_indian":50},"..."]}></ResponseCard>
                 </div>
             </div>
             <div id="juvenileArrestsGetYearRange" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Range of Years</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the crimes estimated by the arrests Reporting System for each state
-                        from the range of years requested. The range of years this endpoint will return are between 1979-2019. Any other year will return an empty object. The years passed
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives a list of objects detailing the juviinle arrests for each offense
+                        from the range of years requested. The range of years this endpoint will return are between 1994-2016. Any other year will return an error. The years passed
                         for the variables yearstart and yearend are inclusive.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
@@ -205,14 +204,14 @@ function JuvenileArrestApiDocs() {
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the estimated crimes committed for each state in the range of years requested.</p>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing the juvenile crimes committed by each offense in the range of years requested.</p>
                         </div>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="juvenile-arrests/years/:yearstart/:yearend"></ApiCard>
-                    <ResponseCard response={[{"year":1999,"total_arrests":1220464,"total_manufacture":246986,"opioid_manufacture":136960,"marijuana_manufacture":66108,"synthetic_manufacture":12345,"other_manufacture":31480,"total_possess":893208,"opioid_possess":278052,"marijuana_possess":462849,"synthetic_possess":20260,"other_possess":132007},"...",{"year":2002,"total_arrests":1190902,"total_manufacture":218961,"opioid_manufacture":107225,"marijuana_manufacture":59606,"synthetic_manufacture":15376,"other_manufacture":36718,"total_possess":894215,"opioid_possess":249694,"marijuana_possess":441313,"synthetic_possess":32267,"other_possess":170878}]}></ResponseCard>
+                    <ResponseCard response={[{"year":2001,"offense_code":"ARSON","offense_name":"Arson","total_male":5777,"total_female":749,"m_0_9":651,"m_10_12":1373,"m_13_14":1724,"m_15":826,"m_16":670,"m_17":533,"f_0_9":53,"f_10_12":135,"f_13_14":280,"f_15":112,"f_16":100,"f_17":69,"white":5289,"black":1095,"asian_pacific_islander":64,"american_indian":66},"...",{"year":2005,"offense_code":"WEAP","offense_name":"Weapons","total_male":30772,"total_female":3696,"m_0_9":328,"m_10_12":2442,"m_13_14":7427,"m_15":5890,"m_16":6886,"m_17":7799,"f_0_9":19,"f_10_12":344,"f_13_14":1188,"f_15":832,"f_16":721,"f_17":592,"white":20944,"black":12715,"asian_pacific_islander":420,"american_indian":267}]}></ResponseCard>
                 </div>
             </div>
             <div id="juvenileArrestsGetOffenses" className="flex flex-row w-full pt-12 pb-6">
@@ -258,30 +257,33 @@ function JuvenileArrestApiDocs() {
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="juvenile-arrests/offense-code"></ApiCard>
-                    <ResponseCard response={["ARSON","AST","AST_SMP","BRG","CUR","DIS","DRG","DRK","DUI","EMB","FAM","FOR","FRD","GAM","HOM","LIQ","LRC","MAN","MVT","OTH","PRS","ROB","RPE","RUN","SEX","STP","SUS","VAG","VAN","WEAP"]}></ResponseCard>
+                    <ResponseCard response={["ARSON","AST","AST_SMP","BRG","CUR","DIS","DRG","DRK","DUI","EMB","FAM","FOR","FRD","GAM","HOM","LIQ","LRC","MAN","MVT",
+                    "OTH","PRS","ROB","RPE","RUN","SEX","STP","SUS","VAG","VAN","WEAP"]}></ResponseCard>
                 </div>
             </div>
             <div id="juvenileArrestsGetSpecificOffense" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl font-medium">Get Specific Offense</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an array of offense codes cataloged within the National Juevnile Arrest Data in the United States.</p>
+                    <p className="pt-6 pb-2 pr-2 text-blue-200">This endpoint retreives an array of objects by offense codes cataloged within the National Juevnile Arrest Data in the United States.</p>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Parameters</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">No parameters.</p>
+                            <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
+                            <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at arrests Object Schema for possible fields. 
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=total_female,m_17</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
                         <p className="pt-6 pb-2 pr-2 text-blue-200">Returns</p>
                         <div>
-                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of offense codes included in the dataset, formatted as strings.</p>
+                            <p className="pt-2 pb-2 text-gray-400 text-sm">An array of objects detailing juvenile arrests data for the specified arrest.</p>
                         </div>
                     </div>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>
                     <ApiCard endpoint="juvenile-arrests/offenses/:offense"></ApiCard>
-                    <ResponseCard response={["ARSON","AST","AST_SMP","BRG","CUR","DIS","DRG","DRK","DUI","EMB","FAM","FOR","FRD","GAM","HOM","LIQ","LRC","MAN","MVT","OTH","PRS","ROB","RPE","RUN","SEX","STP","SUS","VAG","VAN","WEAP"]}></ResponseCard>
+                    <ResponseCard response={{"year":1994,"offense_code":"FOR","offense_name":"Forgery and Counterfeiting","total_male":4491,"total_female":2566,"m_0_9":23,"m_10_12":131,"m_13_14":429,"m_15":606,"m_16":1353,"m_17":1949,"f_0_9":10,"f_10_12":59,"f_13_14":288,"f_15":380,"f_16":711,"f_17":1118,"white":5611,"black":1268,"asian_pacific_islander":101,"american_indian":69}}></ResponseCard>
                 </div>
             </div>
         </div>
