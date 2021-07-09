@@ -344,10 +344,24 @@ function Navbar() {
                             <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
                                 <Link to="juvenileArrestsGetOffenses">                
                                     <div className="flex items-center">
-                                        <span className="text-sm ml-1">Get List of Juvenile Offenses</span>
+                                        <span className="text-sm ml-1">Get List of Offenses</span>
                                     </div>
                                 </Link>
-                            </li>       
+                            </li> 
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="juvenileArrestsGetOffenseCodes">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm ml-1">Get List of Offense Codes</span>
+                                    </div>
+                                </Link>
+                            </li>    
+                            <li className="flex w-full justify-between text-gray-500 hover:text-gray-200 cursor-pointer items-center mb-4">
+                                <Link to="juvenileArrestsGetSpecificOffense">                
+                                    <div className="flex items-center">
+                                        <span className="text-sm ml-1">Get Specific Offense</span>
+                                    </div>
+                                </Link>
+                            </li>          
                         </div>
                         }
                     </ul>
