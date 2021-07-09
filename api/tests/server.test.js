@@ -286,11 +286,88 @@ describe("Testing the drug arrests API endpoint", () => {
 
 describe("Testing the juvenile arrests API endpoint", () => {
 
-	it("GET base route and returns true for status", async () => {
+	it("GET base route and returns 200 for status", async () => {
 
-		const response = await supertest(app).get('/v1/juvenile-arrests');
+		const response = await supertest(app).get('/v1/juvenile-arrests?limit=1');
 
 		expect(response.status).toBe(200);
-	});
+		expect(response.body.length).toEqual(1);
+		expect(response.body[0].year).toEqual(1994);
+		expect(response.body[0].offense_name).toEqual("Arson");
+		expect(response.body[0].total_male).toEqual(8050);
 
+	});
+	it("GET /years route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/years');
+
+		expect(response.status).toBe(200);
+		expect(response.body.length).toEqual(23); 
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body).toEqual([1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]);
+
+	});
+	it("GET /years/:year route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/years/2001');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].year).toEqual(2001);
+		expect(response.body[0].white).toEqual(5289);
+		expect(response.body[0].black).toEqual(1095);
+	});
+	it("GET /years/:year route and return 404 error for wrong field name", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/years/2001?fields=random');
+
+		expect(response.status).toBe(404);
+		expect(response.body).toEqual({"message":"'random' field not found. Please refer to object schema for correct fields."});
+
+	});
+	it("GET /years/:year route and return 404 error for year out of range", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/years/1992');
+
+		expect(response.status).toBe(404);
+		expect(response.body).toEqual({"message":"The year must be between 1994-2016."});
+
+	});
+	it("GET /years/:yearstart/:yearend route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/years/2001/2003?fields=american_indian');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0]).toEqual({"year":2001,"offense_name":"Arson","american_indian":66});
+		expect(response.body[1]).toEqual({"year":2001,"offense_name":"Aggravated Assault","american_indian":482});
+
+	});
+	it("GET /offenses route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/offenses');
+
+		expect(response.status).toBe(200);
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body.length).toEqual(30); 
+		expect(response.body).toEqual(["Aggravated Assault","All Other Offenses","Arson","Burglary","Curfew and Loitering Law Violations","Disorderly Conduct","Drive Under the Influence","Drug Abuse Violations","Drunkenness","Embezzlement","Forgery and Counterfeiting","Fraud","Gambling","Larceny","Liquor Laws","Manslaughter by Negligence","Motor Vehicle Theft","Murder and Nonnegligent Homicide","Offenses Against the Family and Children","Prostitution and Commercialized Vice","Rape","Robbery","Runaway","Sex Offenses","Simple Assault","Stolen Property","Suspicion","Vagrancy","Vandalism","Weapons"]);
+	
+	});
+	it("GET /offenses-code route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/offense-code');
+
+		expect(response.status).toBe(200);
+		expect(Array.isArray(response.body)).toBeTruthy();
+		expect(response.body.length).toEqual(30); 
+		expect(response.body).toEqual(["ARSON","AST","AST_SMP","BRG","CUR","DIS","DRG","DRK","DUI","EMB","FAM","FOR","FRD","GAM","HOM","LIQ","LRC","MAN","MVT","OTH","PRS","ROB","RPE","RUN","SEX","STP","SUS","VAG","VAN","WEAP"]);
+	
+	});
+	it("GET /offenses/:offense route and returns 200 for status", async () => {
+
+		const response = await supertest(app).get('/v1/juvenile-arrests/offenses/DUI');
+
+		expect(response.status).toBe(200);
+		expect(response.body[0].year).toEqual(1994);
+		expect(response.body[0].offense_code).toEqual("DUI");
+	
+	});
 });
