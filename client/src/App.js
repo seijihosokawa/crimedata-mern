@@ -4,6 +4,7 @@ import MobileNavConatiner from './MobileNavContainer';
 import SummaryApiDocs from './SummaryApiDocs.js';
 import ArrestsApiDocs from './ArrestsApiDocs.js'
 import DrugArrestsApiDocs from './DrugArrestApiDocs.js';
+import JuvenileArrestApiDocs from './JuvenileArrestApiDocs.js'
 import './style.css';
 
 
@@ -78,7 +79,9 @@ const App = () => {
                 <div className="h-1 w-full bg-gray-200"></div>
                 <ArrestsApiDocs></ArrestsApiDocs>
                 <div className="h-1 w-full bg-gray-200"></div>
-                <DrugArrestsApiDocs></DrugArrestsApiDocs>     
+                <DrugArrestsApiDocs></DrugArrestsApiDocs>
+                <div className="h-1 w-full bg-gray-200"></div>
+                <JuvenileArrestApiDocs></JuvenileArrestApiDocs>       
             </div>
         </div>
     )
