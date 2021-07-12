@@ -120,7 +120,7 @@ function JuvenileArrestApiDocs() {
 
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Arrests Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=opioid_manufacture,synthetic_manufacture</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=white,black</code></p>
                         </div>
 
                     </div>
@@ -171,7 +171,7 @@ function JuvenileArrestApiDocs() {
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at Arrests Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=opioid_manufacture,synthetic_manufacture</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=white,black</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
@@ -198,7 +198,7 @@ function JuvenileArrestApiDocs() {
                         <div>
                             <p className="pt-2 pb-2 pr-2 text-gray-200">fields<span className="pl-2 text-gray-400 text-sm">optional</span></p>
                             <p className=" pb-2 text-gray-400 text-sm">A query parameter that will only return the requested field. Look at arrests Object Schema for possible fields. 
-                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=opioid_manufacture,synthetic_manufacture</code></p>
+                            User can request more than one field by seperating each fields with a comma. This parameter can be used as <code className="text-gray-300 text-xs">fields=white,black</code></p>
                         </div>
                     </div>
                     <div className="divide-y divide-gray-400">
