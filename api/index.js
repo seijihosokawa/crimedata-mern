@@ -8,6 +8,8 @@ import arrestsRoutes from './routes/arrestsNational.js'
 import drugArrestsRoutes from './routes/drugArrests.js';
 import juvenileArrestsRoutes from './routes/juvenileArrests.js';
 
+import graphql from './routes/graphql.js'
+
 const app = express();
 
 
@@ -20,7 +22,7 @@ app.use('/v1/arrests', arrestsRoutes);
 app.use('/v1/drug-arrests', drugArrestsRoutes);
 app.use('/v1/juvenile-arrests', juvenileArrestsRoutes);
 
-
+app.use('/graphql', graphql);
 
 dotenv.config();
 
