@@ -9,19 +9,19 @@ function SummaryApiDocs() {
     let exampleTotalsSchema = { "year": 1979, "population": 220099000, "violent_crime": 1208030, "homicide": 21460, "rape": 76390, "robbery": 480700, "aggravated_assault": 629480, "property_crime": 11041500, "burglary": 3327700, "larceny": 6601000, "motor_vehicle_theft": 1112800 }
 
     return (
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-gray-200 text-sm md:text-base">
             <div id="summary" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Summary Reporting System</h1>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains estimated data at the state and national level and was derived from the
-                        Summary Reporting System (SRS). These data reflect the estimates the FBI has traditionally included in its annual publications.</p>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the FBI's estimated crime totals for the nation and all 50 states, between 1979 to 2019.</p>
-                    <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the Summary Reporting System<a className="text-blue-600 hover:text-gray-300" href="https://ofm.wa.gov/sites/default/files/public/legacy/sac/pdf/srs/srs_dictionary.pdf"> Data Definitions</a>.</p>
-                    <ul className="pt-6 pb-2 pr-2 text-gray-200">
-                        <li> - Data Type: Estimated Crimes</li>
-                        <li> - Years: 1979-2019</li>
-                        <li> - Last Modified: August 25, 2020</li>
-                    </ul>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">This dataset contains estimated data at the state and national level and was derived from the
+                            Summary Reporting System (SRS). These data reflect the estimates the FBI has traditionally included in its annual publications.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">The purpose of this endpoint is to give an overall summary of the FBI's estimated crime totals for the nation and all 50 states, between 1979 to 2019.</p>
+                        <p className="pt-6 pb-2 pr-2 text-blue-200">Here are the Summary Reporting System<a className="text-blue-600 hover:text-gray-300" href="https://ofm.wa.gov/sites/default/files/public/legacy/sac/pdf/srs/srs_dictionary.pdf"> Data Definitions</a>.</p>
+                        <ul className="pt-6 pb-2 pr-2 text-gray-200">
+                            <li> - Data Type: Estimated Crimes</li>
+                            <li> - Years: 1979-2019</li>
+                            <li> - Last Modified: August 25, 2020</li>
+                        </ul>
                 </div>
                 <div className="hidden md:block container w-1/2 p-4">
                     <h1 className="text-3xl invisible pb-6">Data/Code</h1>

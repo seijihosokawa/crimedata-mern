@@ -8,7 +8,7 @@ function DrugArrestsApiDocs() {
     let exampleDrugArrestsSchema = {"year":1994,"total_arrests":1121002,"total_manufacture":284898,"opioid_manufacture":178318,"marijuana_manufacture":61448,"synthetic_manufacture":5672,"other_manufacture":38658,"total_possess":782761,"opioid_possess":321740,"marijuana_possess":316501,"synthetic_possess":12811,"other_possess":127051};
 
     return (
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-gray-200 text-sm md:text-base">
             <div id="drugArrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Drug Arrest Data - Reported Number of Arrests by Crime</h1>

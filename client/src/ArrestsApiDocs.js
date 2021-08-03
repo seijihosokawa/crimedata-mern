@@ -8,7 +8,7 @@ function ArrestsApiDocs() {
     let exampleArrestsSchema = {"year":2016,"population":323127513,"total_arrests":10662252,"homicide":11788,"rape":23632,"robbery":95754,"aggravated_assault":383977,"burglary":207325,"larceny":1050058,"motor_vehicle_theft":86088,"arson":9812,"violent_crime":515151,"property_crime":1353283,"other_assault":1078808,"forgery":56661,"fraud":128531,"embezzlement":15937,"stolen_property":93981,"vandalism":195951,"weapons":156777,"prostitution":38306,"other_sex_offenses":51063,"drug_abuse":1572579,"gambling":3705,"against_family":88748,"dui":1017808,"liquor_laws":234899,"drunkenness":376433,"disorderly_conduct":369733,"vagrancy":24851,"other":3254871,"suspicion":576,"curfew_loitering":34176};
 
     return (
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-gray-200 text-sm md:text-base">
             <div id="arrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Arrest Data - Reported Number of Arrests by Crime</h1>

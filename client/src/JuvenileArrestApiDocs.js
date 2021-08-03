@@ -8,7 +8,7 @@ function JuvenileArrestApiDocs() {
     let exampleJuvenileArrestsSchema = {"year":1994,"offense_code":"ARSON","offense_name":"Arson","total_male":8050,"total_female":1133,"m_0_9":1030,"m_10_12":1808,"m_13_14":2618,"m_15":1060,"m_16":846,"m_17":688,"f_0_9":108,"f_10_12":214,"f_13_14":452,"f_15":158,"f_16":107,"f_17":94,"white":7319,"black":1649,"asian_pacific_islander":93,"american_indian":98};
 
     return (
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-gray-200 text-sm md:text-base">
             <div id="juvenileArrests" className="flex flex-row w-full pt-12 pb-6">
                 <div className="container w-full md:w-1/2 p-4 pt-4">
                     <h1 className="text-gray-100 text-3xl md:text-4xl font-medium">Juvenile Arrest Data - Reported Number of Arrests by Crime</h1>
