@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-scroll';
+import { Link as MainLink } from 'react-router-dom'
 
 function Navbar() {
     const [hideSummary, setHideSummary] = useState(true);
@@ -365,7 +366,11 @@ function Navbar() {
                         </div>
                         }
                     </ul>
-                    
+                </div>
+                <div>
+                    <MainLink to="/">                
+                        Back to Main
+                    </MainLink>
                 </div>
             </div>
     );

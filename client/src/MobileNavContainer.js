@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar.js";
+import Navbar from "./DocsNavbar.js";
 
 function MobileNavConatiner() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
