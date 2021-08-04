@@ -17,12 +17,17 @@ const MainNavbar = () => {
                     <div id="dropdown-data" className="transition duration-500 hover:text-gray-400">                        
                         Datasets  
                         <div id="dropdown-content-data" className="rounded h-24 w-60 p-4 mt-2 text-gray-300 bg-gray-900">
+                            <div id="arrow-up" className="absolute -top-2 right-12 text-gray-900"></div>
                             <p>drop down contnet</p>    
                         </div>  
                     </div>
+                    
                     <div id="dropdown-dev" className="transition duration-500 hover:text-gray-400">                        
                         Developers
+
                         <div id="dropdown-content-dev" className="rounded h-24 w-60 p-4 mt-2 text-gray-300 bg-gray-900">
+                            <div id="arrow-up" className="absolute -top-2 left-12 text-gray-900"></div>
+
                             <p>drop down contnet</p>    
                         </div>  
                     </div>
