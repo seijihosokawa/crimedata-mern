@@ -2,32 +2,37 @@
     position: relative;
     display: inline-block;
   }
-
-#dropdown-dev {
-    position: relative;
-    display: inline-block;
-  }
   
-#dropdown-content-dev {
-    display: none;
-    left: -50%;
-    position: absolute;
-    z-index: 1;
-}
-
 #dropdown-content-data {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
     right: -50%;
     position: absolute;
     z-index: 1;
 }
   
 #dropdown-data:hover #dropdown-content-data {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+#dropdown-dev {
+    position: relative;
+  }
+  
+#dropdown-content-dev {
+    left: -50%;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
 }
 
 #dropdown-dev:hover #dropdown-content-dev {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 #arrow-up {
