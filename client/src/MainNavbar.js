@@ -38,12 +38,17 @@ const MainNavbar = () => {
                             <div id="arrow-up" className="absolute -top-2 left-12 text-gray-900"></div>
                             
                             <div className="flex cursor-pointer transition duration-500 hover:text-gray-400">
-                                <MainLink to="/docs/api">
+                                <MainLink className="flex" to="/docs/api">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="pr-1 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                                     </svg>
+                                    <p className="pl-1">Documentation</p>
                                 </MainLink>
-                                <p className="pl-1">Documentation</p>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="pt-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                </div>                               
                             </div>
                             <p className="text-sm text-gray-500 pl-1">Start using Crimes Data API</p>
                             <div className="grid grid-cols-2 gap-4 pt-8 text-sm text-gray-400">
