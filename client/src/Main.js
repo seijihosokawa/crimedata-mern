@@ -1,11 +1,20 @@
-import React from 'react';
-import MainNavbar from './MainNavbar'
+import React, { useEffect, useState } from 'react';
+import MainNavbar from './MainNavbar';
+
 
 const Main = () => {
-    return(
-        <div className="">
+    const [summaryData, setSummaryData] = useState([]);
+
+    useEffect(() => {
+        fetch("https://crimedata-mern.herokuapp.com/v1/summary/years-total/")
+          .then((response) => response.json())
+          .then((data) => {
+            setSummaryData(data);
+          });
+      }, []);
+    return (
+        <div id="page" className="flex flex-no-wrap bg-gray-800 h-screen">
             <MainNavbar/>
-            <h1> Hello world</h1>
         </div>
     )
 }
