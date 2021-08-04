@@ -16,19 +16,61 @@ const MainNavbar = () => {
                 <div className="flex items-center space-x-24 text-gray-200">
                     <div id="dropdown-data" className="transition duration-500 hover:text-gray-400">                        
                         Datasets  
-                        <div id="dropdown-content-data" className="rounded h-24 w-60 p-4 mt-2 text-gray-300 bg-gray-900">
+                        <div id="dropdown-content-data" className="rounded h-80 w-96 p-4 mt-2 text-gray-300 bg-gray-900">
                             <div id="arrow-up" className="absolute -top-2 right-12 text-gray-900"></div>
-                            <p>drop down contnet</p>    
+                            <ul className="space-y-2 px-2">
+                                <li>
+                                    <p className="bolded">Summary</p>
+                                    <p className="text-sm text-gray-500 pl-1">Estimated Crimes from Summary Reporting System</p>
+
+                                </li>
+                                <li>Arrests</li>
+                                <li>Drug Arrests</li>
+                                <li>Juvenile Arrests</li>
+                            </ul>   
                         </div>  
                     </div>
                     
                     <div id="dropdown-dev" className="transition duration-500 hover:text-gray-400">                        
                         Developers
 
-                        <div id="dropdown-content-dev" className="rounded h-24 w-60 p-4 mt-2 text-gray-300 bg-gray-900">
+                        <div id="dropdown-content-dev" className="rounded h-44 w-96 p-4 mt-2 text-gray-300 bg-gray-900">
                             <div id="arrow-up" className="absolute -top-2 left-12 text-gray-900"></div>
+                            
+                            <div className="flex cursor-pointer transition duration-500 hover:text-gray-400">
+                                <MainLink to="/docs/api">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="pr-1 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                                    </svg>
+                                </MainLink>
+                                <p className="pl-1">Documentation</p>
+                            </div>
+                            <p className="text-sm text-gray-500 pl-1">Start using Crimes Data API</p>
+                            <div className="grid grid-cols-2 gap-4 pt-8 text-sm text-gray-400">
+                                <div className="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="pb-1 h-6 w-6 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                                    </svg>
+                                    Full API References</div>
+                                <div className="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="pb-1 h-6 w-6 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                    Code Examples</div>
+                                <div className="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="pb-1 h-6 w-6 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+                                    <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+                                    </svg>
+                                    Support</div>
+                                <div className="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="pb-1 h-6 w-6 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                                    </svg>
+                                    Detailed Enpoints</div>
+                            </div>
 
-                            <p>drop down contnet</p>    
                         </div>  
                     </div>
                     
