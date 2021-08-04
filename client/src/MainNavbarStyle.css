@@ -1,0 +1,32 @@
+#dropdown-data {
+    position: relative;
+    display: inline-block;
+  }
+
+#dropdown-dev {
+    position: relative;
+    display: inline-block;
+  }
+  
+#dropdown-content-dev {
+    display: none;
+    left: -50%;
+    position: absolute;
+    z-index: 1;
+}
+
+#dropdown-content-data {
+    display: none;
+    right: -50%;
+    position: absolute;
+    z-index: 1;
+}
+  
+#dropdown-data:hover #dropdown-content-data {
+    display: block;
+}
+
+#dropdown-dev:hover #dropdown-content-dev {
+    display: block;
+}
+
