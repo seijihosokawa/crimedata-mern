@@ -20,38 +20,58 @@ const MainNavbar = () => {
                             <div id="arrow-up" className="absolute -top-2 right-12 text-gray-900"></div>
                             <ul className="space-y-2">
                                 <li>
-                                    <div className="flex">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
                                         <p className="">Summary</p>
+                                        <div id="dropdown-item-arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="pt-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
                                     </div>
                                     <p className="text-sm text-gray-500 pl-2">Estimated Crime Totals by Year or State</p>
 
                                 </li>
                                 <li>
-                                    <div className="flex">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
                                         <p className="">Arrests</p>
+                                        <div id="dropdown-item-arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="pt-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
                                     </div>
                                     <p className="text-sm text-gray-500 pl-2">National Arrests Each Year by Offense</p></li>
                                 <li>
-                                    <div className="flex">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
                                         <p className="">Drug Arrests</p>
+                                        <div id="dropdown-item-arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="pt-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
                                     </div>
                                     <p className="text-sm text-gray-500 pl-2">Number of National Drug Arrests Each Year</p>
                                 </li>
                                 <li>                                    
-                                    <div className="flex">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
                                         <p className="">Juvenile Arrests</p>
+                                        <div id="dropdown-item-arrow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="pt-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
                                     </div>
                                     <p className="text-sm text-gray-500 pl-2">Number of Juvenile Arrests Each Year by Offense</p>
                                 </li>
@@ -65,14 +85,14 @@ const MainNavbar = () => {
                         <div id="dropdown-content-dev" className="rounded h-44 w-96 p-4 mt-2 text-gray-300 bg-gray-900">
                             <div id="arrow-up" className="absolute -top-2 left-12 text-gray-900"></div>
                             
-                            <div id="dev-dropdown" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
+                            <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
                                 <MainLink className="flex" to="/docs/api">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="pr-1 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                                     <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                                     </svg>
                                     <p className="pl-1">Documentation</p>
                                 </MainLink>
-                                <div id="docs-arrow">
+                                <div id="dropdown-item-arrow">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="pt-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
