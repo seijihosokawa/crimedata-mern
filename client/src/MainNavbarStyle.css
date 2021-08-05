@@ -6,7 +6,7 @@
 #dropdown-content-data {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    transition: visibility 0.7s, opacity 0.7s ease-in-out;
     right: -50%;
     position: absolute;
     z-index: 1;
@@ -27,7 +27,7 @@
     z-index: 1;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+    transition: visibility 0.7s, opacity 0.7s ease-in-out;
 }
 
 #dropdown-dev:hover #dropdown-content-dev {
@@ -35,6 +35,7 @@
     opacity: 1;
 }
 
+/* CSS for little triangle on top of dropdown*/
 #arrow-up {
     width: 0; 
     height: 0;
@@ -43,3 +44,15 @@
     
     border-bottom: 8px solid ;
   }
+
+/* CSS for arrow showing up on hover of docs*/
+#docs-arrow {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+#dev-dropdown:hover #docs-arrow {
+    visibility: visible;
+    opacity: 1;
+}
