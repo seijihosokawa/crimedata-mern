@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import MainNavbar from './MainNavbar';
+import DataTable from './DataTable';
 
 
 const Main = () => {
-    const [summaryData, setSummaryData] = useState([]);
-
-    useEffect(() => {
-        fetch("https://crimedata-mern.herokuapp.com/v1/summary/years-total/")
-          .then((response) => response.json())
-          .then((data) => {
-            setSummaryData(data);
-          });
-      }, []);
+    const [currDataset, setCurrDataset] = useState('years-total')
     return (
-        <div id="page" className="flex flex-no-wrap bg-gray-800 h-screen">
-            <MainNavbar/>
+        <div id="page" className="bg-gray-800 h-screen">
+            <MainNavbar onChange={(value) => setCurrDataset(value)}/>
+            <div>
+                <p>{ currDataset }</p>
+                <DataTable/>
+            </div>            
         </div>
     )
 }

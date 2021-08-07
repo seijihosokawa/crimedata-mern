@@ -3,7 +3,7 @@ import './MainNavbarStyle.css';
 import { Link as MainLink } from 'react-router-dom';
 
 
-const MainNavbar = () => {
+const MainNavbar = (dataset) => {
     return (
         <div className="w-full">
             <nav className=" hidden md:flex relative py-3 px-12 flex-wrap justify-between text-white">
@@ -16,11 +16,11 @@ const MainNavbar = () => {
                 <div className="flex items-center space-x-24 text-gray-200">
                     <div id="dropdown-data" className="transition duration-500 hover:text-gray-400">                        
                         Datasets  
-                        <div id="dropdown-content-data" className="rounded h-80 w-96 p-4 mt-2 text-gray-300 bg-gray-900">
+                        <div id="dropdown-content-data" className="rounded h-62 w-96 mt-2 p-4 text-gray-300 bg-gray-900">
                             <div id="arrow-up" className="absolute -top-2 right-12 text-gray-900"></div>
                             <ul className="space-y-2">
                                 <li>
-                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400" onClick={event => dataset.onChange("summary")}>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
@@ -35,7 +35,7 @@ const MainNavbar = () => {
 
                                 </li>
                                 <li>
-                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400" onClick={event => dataset.onChange("arrests")}>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
@@ -48,7 +48,7 @@ const MainNavbar = () => {
                                     </div>
                                     <p className="text-sm text-gray-500 pl-2">National Arrests Each Year by Offense</p></li>
                                 <li>
-                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400" onClick={event => dataset.onChange("drug-arrests")}>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
@@ -59,10 +59,10 @@ const MainNavbar = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className="text-sm text-gray-500 pl-2">Number of National Drug Arrests Each Year</p>
+                                    <p className="text-sm text-gray-500 pl-2">National Drug Arrests Each Year</p>
                                 </li>
                                 <li>                                    
-                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400">
+                                    <div id="dropdown-item" className="flex cursor-pointer transition duration-500 hover:text-gray-400" onClick={event => dataset.onChange("juvenile-arrests")}>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="pt-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                         </svg>
@@ -73,7 +73,7 @@ const MainNavbar = () => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className="text-sm text-gray-500 pl-2">Number of Juvenile Arrests Each Year by Offense</p>
+                                    <p className="text-sm text-gray-500 pb-2 pl-2">Juvenile Arrests Each Year by Offense</p>
                                 </li>
                             </ul>   
                         </div>  

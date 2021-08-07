@@ -5,7 +5,7 @@ import SummaryApiDocs from './SummaryApiDocs.js';
 import ArrestsApiDocs from './ArrestsApiDocs.js'
 import DrugArrestsApiDocs from './DrugArrestApiDocs.js';
 import JuvenileArrestApiDocs from './JuvenileArrestApiDocs.js'
-import './style.css';
+import '../style.css';
 import { Link as MainLink } from 'react-router-dom'
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Docs from './Docs';
+import Docs from './docsComponents/Docs';
 import Main from './Main';
 import { Route } from 'react-router-dom';
 

@@ -1,3 +1,5 @@
+/* Animations for dropdown menu for datasets buttong*/
+
 #dropdown-data {
     position: relative;
     display: inline-block;
@@ -16,6 +18,7 @@
     visibility: visible;
     opacity: 1;
 }
+/* Animations for dropdown menu for developer buttong*/
 
 #dropdown-dev {
     position: relative;
