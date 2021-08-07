@@ -1,26 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
 
-const DataTable = () => {
-    const [summaryData, setSummaryData] = useState([]);
+const DataTable = (tableData) => {
     const summaryCols = ["year", "population", "violent_crime", "homicide", "rape", "robbery", "aggravated_assault", "property_crime", "burglary", "larceny", "motor_vehicle_theft"]
 
-    useEffect(() => {
-        fetch("https://crimedata-mern.herokuapp.com/v1/summary/years-total/")
-          .then((response) => response.json())
-          .then((data) => {
-            setSummaryData(data);
-          });
-      }, []);
+    console.log(tableData)
     return (
         <div className="text-sm overflow-y-auto">
+          <table>
           <tr>
             {
               summaryCols.map((item) => 
               <th>{item}</th>)
             }
           </tr>
-            { summaryData.map(( {year, population, violent_crime, homicide, rape, robbery, aggravated_assault, property_crime, burglary, larceny, motor_vehicle_theft}) => (
+            {/* { tableData.map(( {year, population, violent_crime, homicide, rape, robbery, aggravated_assault, property_crime, burglary, larceny, motor_vehicle_theft}) => (
               <tr>
                 <td>{year}</td> 
                 <td>{population}</td>
@@ -34,8 +28,9 @@ const DataTable = () => {
                 <td>{larceny}</td>
                 <td>{motor_vehicle_theft}</td>
               </tr>
-            ))
+            )) }*/
             }
+            </table>
         </div>
     )
 }

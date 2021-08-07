@@ -1,6 +1,6 @@
 import React from 'react';
 import Docs from './docsComponents/Docs';
-import Main from './Main';
+import Main from './mainComponents/Main';
 import { Route } from 'react-router-dom';
 
 
