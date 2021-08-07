@@ -1,35 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 
 const DataTable = (tableData) => {
-    const summaryCols = ["year", "population", "violent_crime", "homicide", "rape", "robbery", "aggravated_assault", "property_crime", "burglary", "larceny", "motor_vehicle_theft"]
 
-    console.log(tableData)
+    //console.log(Object.keys(tableData.tableData[0]))
     return (
         <div className="text-sm overflow-y-auto">
           <table>
+          <thead>
+
           <tr>
             {
-              summaryCols.map((item) => 
+              Object.keys(tableData.tableData[0]).map((item) => 
               <th>{item}</th>)
             }
           </tr>
-            {/* { tableData.map(( {year, population, violent_crime, homicide, rape, robbery, aggravated_assault, property_crime, burglary, larceny, motor_vehicle_theft}) => (
+          </thead>
+          <tbody>
+
+            { tableData.tableData.map((item) => (
               <tr>
-                <td>{year}</td> 
-                <td>{population}</td>
-                <td>{violent_crime}</td>
-                <td>{homicide}</td>
-                <td>{rape}</td>
-                <td>{robbery}</td>
-                <td>{aggravated_assault}</td>
-                <td>{property_crime}</td>
-                <td>{burglary}</td>
-                <td>{larceny}</td>
-                <td>{motor_vehicle_theft}</td>
+              {Object.keys(tableData.tableData[0]).map((col) => 
+              <td>{item[col]}</td>)}
               </tr>
-            )) }*/
+            )) 
             }
+            </tbody>
             </table>
         </div>
     )

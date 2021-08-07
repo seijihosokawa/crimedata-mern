@@ -6,21 +6,20 @@ import DataTable from './DataTable';
 const Main = () => {
     const [currDataset, setCurrDataset] = useState('summary/years-total');
     const [summaryData, setSummaryData] = useState([]);
-    const url = 'https://crimedata-mern.herokuapp.com/v1/';
-
-    console.log(url+currDataset)
+    const [dataLoading, setDataLoading] = useState(true);
+    
     useEffect(() => {
-        fetch(url+currDataset).then((response) => response.json()).then((data) => {
-              console.log(url+currDataset)
+        fetch('https://crimedata-mern.herokuapp.com/v1/'+currDataset).then((response) => response.json()).then((data) => {
             setSummaryData(data);
+            setDataLoading(false);
           });
-      });
+      }, [currDataset]);
 
     return (
         <div id="page" className="bg-gray-800 h-full ">
             <MainNavbar onChange={(value) => setCurrDataset(value)}/>
             <div className="flex justify-center mx-auto w-5/6">
-                <DataTable tableData={summaryData}/>
+                {dataLoading ? <p>Loading</p> : <DataTable tableData={summaryData}/>}
             </div>            
         </div>
     )
