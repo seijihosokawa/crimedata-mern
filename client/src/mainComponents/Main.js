@@ -27,14 +27,24 @@ const Main = () => {
     }, [currDataset]);
 
     return (
-        <div id="page" className="bg-gray-800 h-full">
-            <MainNavbar onChange={(value) => setCurrDataset(value)}/>
-            <div className="mx-auto w-5/6">
-                <InfoBox dataset={currDataset} years={datasetYears}/>
-            </div>
-            <div className="flex justify-center mx-auto w-5/6">
-                {dataLoading ? <p>Loading</p> : <DataTable tableData={summaryData}/>}
-            </div>            
+        <div id="page" className="flex flex-col h-screen justify-between bg-gray-800">
+            <header className="h-auto">
+                <MainNavbar onChange={(value) => setCurrDataset(value)}/>
+                <div className="mx-auto w-5/6">
+                    <InfoBox dataset={currDataset} years={datasetYears}/>
+                </div>
+            </header>
+            <main className="h-full  overflow-auto	">
+                
+                <div className="flex justify-center mx-auto w-5/6 ">
+                    {dataLoading ? <svg class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-90" viewBox="0 0 24 24"/> : <DataTable tableData={summaryData}/>}
+                </div>
+            </main>
+            <footer className="h-14 pt-2">
+                <div className="flex justify-center mx-auto w-5/6">
+                    <div class="hidden md:block text-gray-500 text-sm "> © 2021 Copyright | Seiji Hosokawa</div>
+                </div>            
+            </footer>           
         </div>
     )
 }
