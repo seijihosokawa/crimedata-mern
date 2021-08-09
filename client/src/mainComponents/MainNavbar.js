@@ -73,7 +73,7 @@ const MainNavbar = (dataset) => {
                                             </svg>
                                         </div>
                                     </div>
-                                    <p className="text-sm text-gray-500 pb-2 pl-2">Juvenile Arrests Each Year by Offense</p>
+                                    <p className="text-sm text-gray-500 pb-2 pl-2">Juvenile Arrests by Year, Age and Offense</p>
                                 </li>
                             </ul>   
                         </div>  

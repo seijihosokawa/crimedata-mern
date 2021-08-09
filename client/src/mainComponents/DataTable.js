@@ -5,7 +5,7 @@ const DataTable = (tableData) => {
 
     //console.log(Object.keys(tableData.tableData[0]))
     return (
-        <div className="text-sm overflow-y-auto">
+        <div className="text-sm overflow-y-auto max-h-full text-gray-200">
           <table>
           <thead>
 
